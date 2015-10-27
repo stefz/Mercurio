@@ -7,7 +7,7 @@
 //
 
 #import "MEApi.h"
-#import <AFURLRequestSerialization.h>
+#import "AFURLRequestSerialization.h"
 #import "MECredentialManager.h"
 
 NSString * const kMETokenHeaderKey = @"token";

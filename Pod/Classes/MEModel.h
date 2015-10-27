@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 Stefano Zanetti. All rights reserved.
 //
 
-#import <MTLModel.h>
-#import <MTLJSONAdapter.h>
+#import "MTLModel.h"
+#import "MTLJSONAdapter.h"
 
 #define selStr(sel) NSStringFromSelector(@selector(sel))
 
