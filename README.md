@@ -53,9 +53,9 @@ pod 'Mercurio', '~> 0.1.0'
 ### Create the api call
 ```objective-c
 MEApi *api = [MEApi apiWithMethod:MEApiMethodGET
-                                 path:@"https://httpbin.org/get"
-                        responseClass:[MEResponse class]
-                             jsonRoot:@"headers"];
+                             path:@"https://httpbin.org/get"
+                    responseClass:[MEResponse class]
+                         jsonRoot:@"headers"];
 ```
 ### Execute the call    
 ```objective-c    
