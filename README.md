@@ -59,13 +59,12 @@ MEApi *api = [MEApi apiWithMethod:MEApiMethodGET
 ```
 ### Execute the call    
 ```objective-c    
-    [[MESessionManager sharedInstance] sessionDataTaskWithApi:api
-                                                   completion:^(id responseObject, NSURLSessionDataTask *task, NSError *error) {
-                                                       if (!error) {
-                                                           NSLog(@"%@", responseObject);
-                                                           _logLabel.text = [responseObject description];
-                                                       }
-                                                   }];
+[[MESessionManager sharedInstance] sessionDataTaskWithApi:api
+                                               completion:^(id responseObject, NSURLSessionDataTask *task, NSError *error) {
+                                                   if (!error) {
+                                                       NSLog(@"%@", responseObject);
+                                                   }
+                                               }];
 
 ```
 
