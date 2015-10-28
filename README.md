@@ -17,7 +17,7 @@ Mercurio is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'Mercurio', '~> 0.1.0'
+pod 'Mercurio', '~> 0.1.1'
 ```
 
 ## Example
