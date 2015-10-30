@@ -30,10 +30,8 @@
     
     [[MESessionManager sharedInstance] sessionDataTaskWithApi:api
                                                    completion:^(id responseObject, NSURLSessionDataTask *task, NSError *error) {
-                                                       if (!error) {
-                                                           NSLog(@"%@", responseObject);
-                                                           _logLabel.text = [responseObject description];
-                                                       }
+                                                       NSLog(@"%@", responseObject);
+                                                       _logLabel.text = error ? [error localizedDescription] : [responseObject description];
                                                    }];
     
 }

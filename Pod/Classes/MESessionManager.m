@@ -108,7 +108,7 @@
                         failure(dataTask, [self.errorHelper generateMainErrorWithType:MEMainErrorGenericNetwork internalErrorType:MEInternalErrorTypeParsingResponse]);
                     } else {
                         if (!object) {
-                            //TODO: Generate parsing error
+                            failure(dataTask, [self.errorHelper generateMainErrorWithType:MEMainErrorGenericNetwork internalErrorType:MEInternalErrorTypeParsingResponse]);
                         } else {
                             success(dataTask, object);
                         }

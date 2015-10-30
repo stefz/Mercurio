@@ -10,7 +10,7 @@
 #import "MEConstants.h"
 #import "AFURLConnectionOperation.h"
 
-NSString * const MEErrorDomain = @"it.MEnetworking.error";
+NSString * const MEErrorDomain = @"it.mercurio.error";
 NSString * const MEMainErrorKey = @"MainError";
 NSString * const MEInternalErrorKey = @"InternalError";
 NSString * const MEOriginalErrorKey = @"OriginalError";

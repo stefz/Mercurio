@@ -19,10 +19,12 @@
     NSError *error = nil;
     id object = nil;
     
+    jsonObject = jsonRoot ? [jsonObject valueForKeyPath:jsonRoot] : jsonObject;
+    
     if ([jsonObject isKindOfClass:[NSArray class]]) {
         object = [MTLJSONAdapter modelsOfClass:[self class] fromJSONArray:jsonObject error:&error];
     } else if ([jsonObject isKindOfClass:[NSDictionary class]]) {
-        object = [MTLJSONAdapter modelOfClass:[self class] fromJSONDictionary:jsonRoot ? jsonObject[jsonRoot] : jsonObject error:&error];
+        object = [MTLJSONAdapter modelOfClass:[self class] fromJSONDictionary:jsonObject error:&error];
     }
     
     completion (object, error);
