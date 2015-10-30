@@ -17,11 +17,11 @@ Mercurio is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'Mercurio', '~> 0.1.1'
+pod 'Mercurio', '~> 0.1.2'
 ```
 
 ## Example
-### Define a response object
+##### Define a response object
 
 ```objective-c
 @interface MEResponse : MEModel
@@ -50,14 +50,14 @@ pod 'Mercurio', '~> 0.1.1'
 @end
 
 ```
-### Create the api call
+##### Create the api call
 ```objective-c
 MEApi *api = [MEApi apiWithMethod:MEApiMethodGET
                              path:@"https://httpbin.org/get"
                     responseClass:[MEResponse class]
                          jsonRoot:@"headers"];
 ```
-### Execute the call    
+##### Execute the call    
 ```objective-c    
 [[MESessionManager sharedInstance] sessionDataTaskWithApi:api
                                                completion:^(id responseObject, NSURLSessionDataTask *task, NSError *error) {
