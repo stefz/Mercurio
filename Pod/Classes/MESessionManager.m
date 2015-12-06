@@ -150,8 +150,8 @@
         
         int i = 0;
         for (NSData *data in files) {
-            [formData appendPartWithFormData:data name:[NSString stringWithFormat:@"file_%i", i++]];
-            
+            [formData appendPartWithFileData:data name:[NSString stringWithFormat:@"name_%i", i] fileName:[NSString stringWithFormat:@"file_%i", i] mimeType:@"application/octet-stream"];
+            i++;
         }
     };
     
