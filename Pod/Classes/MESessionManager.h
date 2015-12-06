@@ -28,4 +28,6 @@
  */
 - (NSURLSessionDataTask *)sessionDataTaskWithApi:(MEApi *)api completion:(void(^)(id responseObject, NSURLSessionDataTask *task, NSError *error))completion;
 
+- (NSURLSessionDataTask *)sessionMultipartDataTaskWithApi:(MEApi *)api files:(NSArray *)files completion:(void(^)(id responseObject, NSURLSessionDataTask *task, NSError *error))completion;
+
 @end
