@@ -7,7 +7,6 @@
 //
 
 #import "MEErrorHelper.h"
-#import "MEConstants.h"
 #import <AFURLRequestSerialization.h>
 #import <AFURLResponseSerialization.h>
 

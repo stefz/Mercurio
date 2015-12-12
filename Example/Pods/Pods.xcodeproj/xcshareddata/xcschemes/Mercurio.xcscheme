@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '223FFB2597A99599910C2A6F'
-               BlueprintName = 'Mercurio'
-               ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libMercurio.a'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A3117D0BEDAB040ED87ED16EA93E3D89"
+               BlueprintName = "Mercurio"
+               ReferencedContainer = "container:Pods.xcodeproj"
+               BuildableName = "libMercurio.a">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
