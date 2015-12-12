@@ -8,7 +8,8 @@
 
 #import "MEErrorHelper.h"
 #import "MEConstants.h"
-#import "AFURLConnectionOperation.h"
+#import <AFURLRequestSerialization.h>
+#import <AFURLResponseSerialization.h>
 
 NSString * const MEErrorDomain = @"it.mercurio.error";
 NSString * const MEMainErrorKey = @"MainError";

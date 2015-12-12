@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "Mercurio"
-  s.version          = "0.1.2"
+  s.version          = "0.1.3"
   s.summary          = "Mercurio is a fast way to make an api with AFNetworking and parse the response with Mantle."
   s.homepage         = "https://github.com/stefz/Mercurio"
   s.license          = 'MIT'
@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
     'Mercurio' => ['Pod/Assets/*.png']
   }
 
-  s.dependency 'AFNetworking', '~> 2.6.1'
-  s.dependency 'Mantle', '~> 2.0.5'
+  s.dependency 'AFNetworking', '~> 3.0'
+  s.dependency 'Mantle', '~> 2.0.6'
   s.dependency 'SSKeychain', '~> 1.2.3'
 end

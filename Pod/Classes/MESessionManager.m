@@ -32,8 +32,9 @@
 }
 
 #pragma mark - Regular request
-- (NSURLSessionDataTask *)sessionDataTaskWithApi:(MEApi *)api completion:(void(^)(id responseObject, NSURLSessionDataTask *task, NSError *error))completion {
-
+- (NSURLSessionDataTask *)sessionDataTaskWithApi:(MEApi *)api
+                                      completion:(void(^)(id responseObject, NSURLSessionDataTask *task, NSError *error))completion {
+    
     self.requestSerializer = [api serializer];
     
     NSURLSessionDataTask *task = [self dataTaskWithApi:api success:^(NSURLSessionDataTask *task, id responseObject) {
@@ -43,7 +44,7 @@
         completion(nil, task, error);
         
     }];
-                                    
+    
     [task resume];
     
     return task;
@@ -66,7 +67,10 @@
 
 - (NSMutableURLRequest *)requestWithApi:(MEApi *)api error:(NSError *__autoreleasing *)error {
     NSString *urlString = [[NSURL URLWithString:api.path relativeToURL:self.baseURL] absoluteString];
-    NSMutableURLRequest *mutableRequest = [self.requestSerializer requestWithMethod:[self stringMethodWithRequestMethod:api.method] URLString:urlString parameters:api.params error:error];
+    NSMutableURLRequest *mutableRequest = [self.requestSerializer requestWithMethod:[self stringMethodWithRequestMethod:api.method]
+                                                                          URLString:urlString
+                                                                         parameters:api.params
+                                                                              error:error];
     
     for (NSString *key in [api.headers allKeys]) {
         [mutableRequest addValue:api.headers[key] forHTTPHeaderField:key];
@@ -75,58 +79,27 @@
     return mutableRequest;
 }
 
-- (NSURLSessionDataTask *)dataTaskWithApi:(MEApi *)api success:(void (^)(NSURLSessionDataTask *task, id responseObject))success failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure
+- (NSURLSessionDataTask *)dataTaskWithApi:(MEApi *)api
+                                  success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
+                                  failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure
 {
     NSError *serializationError = nil;
     NSMutableURLRequest *mutableRequest = [self requestWithApi:api error:&serializationError];
     if (serializationError) {
-        if (failure) {
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wgnu"
-            dispatch_async(self.completionQueue ?: dispatch_get_main_queue(), ^{
-                failure(nil, [self.errorHelper generateMainErrorWithType:MEMainErrorGenericNetwork internalErrorType:MEInternalErrorTypeParsingResponse]);
-            });
-#pragma clang diagnostic pop
-        }
-        
-        return nil;
+        return [self serializationErrorWithFailure:failure];
     }
     
-    __block NSURLSessionDataTask *dataTask = nil;
-    dataTask = [self dataTaskWithRequest:mutableRequest completionHandler:^(NSURLResponse * __unused response, id responseObject, NSError *error) {
-        if (error) {
-            if (failure) {
-                NSHTTPURLResponse *taskResponse = (NSHTTPURLResponse *)(dataTask.response);
-                failure(dataTask, [self.errorHelper generateMainError:error response:taskResponse responseObject:responseObject]);
-            }
-        } else if (!responseObject) {
-            success(dataTask, nil);
-        } else {
-            if (success && api.responseObjectClass != [NSNull class]) {
-                
-                [api.responseObjectClass objectWithJsonObject:responseObject jsonRoot:api.jsonRoot completion:^(id<MTLJSONSerializing> object, NSError *error) {
-                    if (error) {
-                        failure(dataTask, [self.errorHelper generateMainErrorWithType:MEMainErrorGenericNetwork internalErrorType:MEInternalErrorTypeParsingResponse]);
-                    } else {
-                        if (!object) {
-                            failure(dataTask, [self.errorHelper generateMainErrorWithType:MEMainErrorGenericNetwork internalErrorType:MEInternalErrorTypeParsingResponse]);
-                        } else {
-                            success(dataTask, object);
-                        }
-                    }
-                }];
-            } else {
-                success(dataTask, nil);
-            }
-        }
-    }];
-    
-    return dataTask;
+    return [self dataTaskWithApi:api
+                         request:mutableRequest
+                         success:success
+                         failure:failure];
 }
 
 #pragma mark - Multipart request
 
-- (NSURLSessionDataTask *)sessionMultipartDataTaskWithApi:(MEApi *)api files:(NSArray *)files completion:(void (^)(id, NSURLSessionDataTask *, NSError *))completion {
+- (NSURLSessionDataTask *)sessionMultipartDataTaskWithApi:(MEApi *)api
+                                                    files:(NSArray *)files
+                                               completion:(void (^)(id, NSURLSessionDataTask *, NSError *))completion {
     
     self.requestSerializer = [api serializer];
     
@@ -143,14 +116,19 @@
     return task;
 }
 
-- (NSMutableURLRequest *)multipartRequestWithApi:(MEApi *)api files:(NSArray *)files error:(NSError *__autoreleasing *)error {
+- (NSMutableURLRequest *)multipartRequestWithApi:(MEApi *)api
+                                           files:(NSArray *)files
+                                           error:(NSError *__autoreleasing *)error {
     NSString *urlString = [[NSURL URLWithString:api.path relativeToURL:self.baseURL] absoluteString];
     
     id block = ^(id<AFMultipartFormData> formData) {
         
         int i = 0;
         for (NSData *data in files) {
-            [formData appendPartWithFileData:data name:[NSString stringWithFormat:@"name_%i", i] fileName:[NSString stringWithFormat:@"file_%i", i] mimeType:@"application/octet-stream"];
+            [formData appendPartWithFileData:data
+                                        name:[NSString stringWithFormat:@"name_%i", i]
+                                    fileName:[NSString stringWithFormat:@"file_%i", i]
+                                    mimeType:@"application/octet-stream"];
             i++;
         }
     };
@@ -168,25 +146,29 @@
     return mutableRequest;
 }
 
-- (NSURLSessionDataTask *)multipartDataTaskWithApi:(MEApi *)api files:(NSArray *)files success:(void (^)(NSURLSessionDataTask *task, id responseObject))success failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure
+- (NSURLSessionDataTask *)multipartDataTaskWithApi:(MEApi *)api
+                                             files:(NSArray *)files
+                                           success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
+                                           failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure
 {
     NSError *serializationError = nil;
     NSMutableURLRequest *mutableRequest = [self multipartRequestWithApi:api files:(NSArray *)files error:&serializationError];
     if (serializationError) {
-        if (failure) {
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wgnu"
-            dispatch_async(self.completionQueue ?: dispatch_get_main_queue(), ^{
-                failure(nil, [self.errorHelper generateMainErrorWithType:MEMainErrorGenericNetwork internalErrorType:MEInternalErrorTypeParsingResponse]);
-            });
-#pragma clang diagnostic pop
-        }
-        
-        return nil;
+        return [self serializationErrorWithFailure:failure];
     }
     
+    return [self dataTaskWithApi:api
+                         request:mutableRequest
+                         success:success
+                         failure:failure];
+}
+
+- (NSURLSessionDataTask *)dataTaskWithApi:(MEApi *)api
+                                  request:(NSMutableURLRequest *)request
+                                  success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
+                                  failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure {
     __block NSURLSessionDataTask *dataTask = nil;
-    dataTask = [self dataTaskWithRequest:mutableRequest completionHandler:^(NSURLResponse * __unused response, id responseObject, NSError *error) {
+    dataTask = [self dataTaskWithRequest:request completionHandler:^(NSURLResponse * __unused response, id responseObject, NSError *error) {
         if (error) {
             if (failure) {
                 NSHTTPURLResponse *taskResponse = (NSHTTPURLResponse *)(dataTask.response);
@@ -197,17 +179,21 @@
         } else {
             if (success && api.responseObjectClass != [NSNull class]) {
                 
-                [api.responseObjectClass objectWithJsonObject:responseObject jsonRoot:api.jsonRoot completion:^(id<MTLJSONSerializing> object, NSError *error) {
-                    if (error) {
-                        failure(dataTask, [self.errorHelper generateMainErrorWithType:MEMainErrorGenericNetwork internalErrorType:MEInternalErrorTypeParsingResponse]);
-                    } else {
-                        if (!object) {
-                            failure(dataTask, [self.errorHelper generateMainErrorWithType:MEMainErrorGenericNetwork internalErrorType:MEInternalErrorTypeParsingResponse]);
-                        } else {
-                            success(dataTask, object);
-                        }
-                    }
-                }];
+                [api.responseObjectClass objectWithJsonObject:responseObject
+                                                     jsonRoot:api.jsonRoot
+                                                   completion:^(id<MTLJSONSerializing> object, NSError *error) {
+                                                       if (error) {
+                                                           failure(dataTask, [self.errorHelper generateMainErrorWithType:MEMainErrorGenericNetwork
+                                                                                                       internalErrorType:MEInternalErrorTypeParsingResponse]);
+                                                       } else {
+                                                           if (!object) {
+                                                               failure(dataTask, [self.errorHelper generateMainErrorWithType:MEMainErrorGenericNetwork
+                                                                                                           internalErrorType:MEInternalErrorTypeParsingResponse]);
+                                                           } else {
+                                                               success(dataTask, object);
+                                                           }
+                                                       }
+                                                   }];
             } else {
                 success(dataTask, nil);
             }
@@ -215,6 +201,20 @@
     }];
     
     return dataTask;
+}
+
+- (NSURLSessionDataTask *)serializationErrorWithFailure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure {
+    if (failure) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wgnu"
+        dispatch_async(self.completionQueue ?: dispatch_get_main_queue(), ^{
+            failure(nil, [self.errorHelper generateMainErrorWithType:MEMainErrorGenericNetwork
+                                                   internalErrorType:MEInternalErrorTypeParsingResponse]);
+        });
+#pragma clang diagnostic pop
+    }
+    
+    return nil;
 }
 
 @end
