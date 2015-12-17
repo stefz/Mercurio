@@ -1,18 +1,18 @@
 PODS:
-  - AFNetworking (3.0.1):
-    - AFNetworking/NSURLSession (= 3.0.1)
-    - AFNetworking/Reachability (= 3.0.1)
-    - AFNetworking/Security (= 3.0.1)
-    - AFNetworking/Serialization (= 3.0.1)
-    - AFNetworking/UIKit (= 3.0.1)
-  - AFNetworking/NSURLSession (3.0.1):
+  - AFNetworking (3.0.3):
+    - AFNetworking/NSURLSession (= 3.0.3)
+    - AFNetworking/Reachability (= 3.0.3)
+    - AFNetworking/Security (= 3.0.3)
+    - AFNetworking/Serialization (= 3.0.3)
+    - AFNetworking/UIKit (= 3.0.3)
+  - AFNetworking/NSURLSession (3.0.3):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.0.1)
-  - AFNetworking/Security (3.0.1)
-  - AFNetworking/Serialization (3.0.1)
-  - AFNetworking/UIKit (3.0.1):
+  - AFNetworking/Reachability (3.0.3)
+  - AFNetworking/Security (3.0.3)
+  - AFNetworking/Serialization (3.0.3)
+  - AFNetworking/UIKit (3.0.3):
     - AFNetworking/NSURLSession
   - Mantle (2.0.6):
     - Mantle/extobjc (= 2.0.6)
@@ -31,7 +31,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AFNetworking: 20d8749e03e45f1e5c046ad0b647e0b07bcdd91f
+  AFNetworking: ba06eb9f27de596808c0acc09e1c920cb1d17ab4
   Mantle: 299966b00759634931699f69cb6a30b9239b944d
   Mercurio: 9bec3b742c39f50e88b55d29a3da61d69c5028f8
   SSKeychain: 3f42991739c6c60a9cf1bbd4dff6c0d3694bcf3d

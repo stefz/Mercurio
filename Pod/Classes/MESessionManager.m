@@ -9,6 +9,7 @@
 #import "MESessionManager.h"
 #import "MEModel.h"
 #import "MEErrorHelper.h"
+#import "MEMultipartFormApiProtocol.h"
 
 @implementation MESessionManager
 
@@ -66,10 +67,21 @@
 
 - (NSMutableURLRequest *)requestWithApi:(MEApi *)api error:(NSError *__autoreleasing *)error {
     NSString *urlString = [[NSURL URLWithString:api.path relativeToURL:self.baseURL] absoluteString];
-    NSMutableURLRequest *mutableRequest = [self.requestSerializer requestWithMethod:[self stringMethodWithRequestMethod:api.method]
-                                                                          URLString:urlString
-                                                                         parameters:api.params
-                                                                              error:error];
+    
+    NSMutableURLRequest *mutableRequest;
+    
+    if ([api conformsToProtocol:@protocol(MEMultipartFormApiProtocol)]) {
+        mutableRequest = [self.requestSerializer multipartFormRequestWithMethod:[self stringMethodWithRequestMethod:api.method]
+                                                                      URLString:urlString
+                                                                     parameters:api.params
+                                                      constructingBodyWithBlock:((MEApi<MEMultipartFormApiProtocol> *)api).constructingBodyBlock
+                                                                          error:error];
+    } else {
+        mutableRequest = [self.requestSerializer requestWithMethod:[self stringMethodWithRequestMethod:api.method]
+                                                         URLString:urlString
+                                                        parameters:api.params
+                                                             error:error];
+    }
     
     for (NSString *key in [api.headers allKeys]) {
         [mutableRequest addValue:api.headers[key] forHTTPHeaderField:key];
@@ -83,75 +95,9 @@
                                   failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure
 {
     NSError *serializationError = nil;
+    
     NSMutableURLRequest *mutableRequest = [self requestWithApi:api error:&serializationError];
-    if (serializationError) {
-        return [self serializationErrorWithFailure:failure];
-    }
     
-    return [self dataTaskWithApi:api
-                         request:mutableRequest
-                         success:success
-                         failure:failure];
-}
-
-#pragma mark - Multipart request
-
-- (NSURLSessionDataTask *)sessionMultipartDataTaskWithApi:(MEApi *)api
-                                                    files:(NSArray *)files
-                                               completion:(void (^)(id, NSURLSessionDataTask *, NSError *))completion {
-    
-    self.requestSerializer = [api serializer];
-    
-    NSURLSessionDataTask *task = [self multipartDataTaskWithApi:api files:(NSArray *)files success:^(NSURLSessionDataTask *task, id responseObject) {
-        completion(responseObject, task, nil);
-    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        
-        completion(nil, task, error);
-        
-    }];
-    
-    [task resume];
-    
-    return task;
-}
-
-- (NSMutableURLRequest *)multipartRequestWithApi:(MEApi *)api
-                                           files:(NSArray *)files
-                                           error:(NSError *__autoreleasing *)error {
-    NSString *urlString = [[NSURL URLWithString:api.path relativeToURL:self.baseURL] absoluteString];
-    
-    id block = ^(id<AFMultipartFormData> formData) {
-        
-        int i = 0;
-        for (NSData *data in files) {
-            [formData appendPartWithFileData:data
-                                        name:[NSString stringWithFormat:@"name_%i", i]
-                                    fileName:[NSString stringWithFormat:@"file_%i", i]
-                                    mimeType:@"application/octet-stream"];
-            i++;
-        }
-    };
-    
-    NSMutableURLRequest *mutableRequest = [self.requestSerializer multipartFormRequestWithMethod:[self stringMethodWithRequestMethod:api.method]
-                                                                                       URLString:urlString
-                                                                                      parameters:api.params
-                                                                       constructingBodyWithBlock:block
-                                                                                           error:error];
-    
-    for (NSString *key in [api.headers allKeys]) {
-        [mutableRequest addValue:api.headers[key] forHTTPHeaderField:key];
-    }
-    
-    return mutableRequest;
-}
-
-- (NSURLSessionDataTask *)multipartDataTaskWithApi:(MEApi *)api
-                                             files:(NSArray *)files
-                                           success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
-                                           failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure
-{
-    NSError *serializationError = nil;
-    NSMutableURLRequest *mutableRequest = [self multipartRequestWithApi:api files:(NSArray *)files error:&serializationError];
     if (serializationError) {
         return [self serializationErrorWithFailure:failure];
     }
@@ -194,7 +140,7 @@
                                                        }
                                                    }];
             } else {
-                success(dataTask, nil);
+                success(dataTask, responseObject);
             }
         }
     }];

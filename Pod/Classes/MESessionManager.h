@@ -29,17 +29,17 @@
 - (NSURLSessionDataTask *)sessionDataTaskWithApi:(MEApi *)api
                                       completion:(void(^)(id responseObject, NSURLSessionDataTask *task, NSError *error))completion;
 
-/**
- *  This method returns a Sessiondatatask for an API Multipart Data
- *
- *  @param api        the executed API
- *  @param files      an array of NSData objects
- *  @param completion a completion block composed by a responseObject, the original task and an optional error
- *
- *  @return a new NSURLSessionDataTask instance
- */
-- (NSURLSessionDataTask *)sessionMultipartDataTaskWithApi:(MEApi *)api
-                                                    files:(NSArray *)files
-                                               completion:(void(^)(id responseObject, NSURLSessionDataTask *task, NSError *error))completion;
+///**
+// *  This method returns a Sessiondatatask for an API Multipart Data
+// *
+// *  @param api        the executed API
+// *  @param files      an array of NSData objects
+// *  @param completion a completion block composed by a responseObject, the original task and an optional error
+// *
+// *  @return a new NSURLSessionDataTask instance
+// */
+//- (NSURLSessionDataTask *)sessionMultipartDataTaskWithApi:(MEApi *)api
+//                                                    files:(NSArray *)files
+//                                               completion:(void(^)(id responseObject, NSURLSessionDataTask *task, NSError *error))completion;
 
 @end
