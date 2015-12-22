@@ -17,7 +17,7 @@ Mercurio is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'Mercurio', '~> 0.1.2'
+pod 'Mercurio', '~> 0.1.3'
 ```
 
 ## Example
@@ -50,7 +50,7 @@ pod 'Mercurio', '~> 0.1.2'
 @end
 
 ```
-##### Create the api call
+##### GET Example
 ```objective-c
 MEApi *api = [MEApi apiWithMethod:MEApiMethodGET
                              path:@"https://httpbin.org/get"
@@ -68,7 +68,30 @@ MEApi *api = [MEApi apiWithMethod:MEApiMethodGET
 
 ```
 
+##### POST Multipart Example
+```objective-c
+MEMultipartFormApi *api = [MEMultipartFormApi apiWithMethod:MEApiMethodPOST
+                                                           path:@"http://posttestserver.com/post.php?dir=mercurio"
+                                                  responseClass:[NSNull class]
+                                                       jsonRoot:@"headers"];
+    
+[api setMultipartFormConstructingBodyBlock:^(id<AFMultipartFormData> formData) {
+       [formData appendPartWithFileData:[NSData data]
+	                                   name:@""name"
+                               fileName:@"file.jpg"
+                               mimeType:@"image/jpeg"];
+}];
+```
+##### Execute the call
+```objective-c    
+[[MESessionManager sharedInstance] sessionMultipartDataTaskWithApi:api
+                                                        completion:^(id responseObject, NSURLSessionDataTask *task, NSError *error) {    
+                                                            if (!error) {
+                                                                NSLog(@"%@", responseObject);
+                                                            }
+                                                        }];
 
+```
 
 
 ## Author

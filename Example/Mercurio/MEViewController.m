@@ -81,24 +81,24 @@
         }
     }];
     
-    [[MESessionManager sharedInstance] sessionDataTaskWithApi:api
-                                                   completion:^(id responseObject, NSURLSessionDataTask *task, NSError *error) {
-                                                       
-                                                       if (error) {
-                                                           _logTextView.text = [error localizedDescription];
-                                                       } else {
-                                                           id object = responseObject;
-                                                           
-                                                           if ([responseObject isKindOfClass:[NSData class]]) {
-                                                               object = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-                                                               NSLog(@"%@", object);
-                                                           } else {
-                                                               NSLog(@"%@", responseObject);
-                                                           }
-                                                           
-                                                           _logTextView.text = object;
-                                                       }
-                                                   }];
+    [[MESessionManager sharedInstance] sessionMultipartDataTaskWithApi:api
+                                                            completion:^(id responseObject, NSURLSessionDataTask *task, NSError *error) {
+                                                                
+                                                                if (error) {
+                                                                    _logTextView.text = [error localizedDescription];
+                                                                } else {
+                                                                    id object = responseObject;
+                                                                    
+                                                                    if ([responseObject isKindOfClass:[NSData class]]) {
+                                                                        object = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+                                                                        NSLog(@"%@", object);
+                                                                    } else {
+                                                                        NSLog(@"%@", responseObject);
+                                                                    }
+                                                                    
+                                                                    _logTextView.text = object;
+                                                                }
+                                                            }];
 }
 
 - (UIImage *)screenshot {

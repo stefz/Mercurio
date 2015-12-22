@@ -31,8 +31,6 @@
     }
 }
 
-#pragma mark - Regular request
-
 - (NSURLSessionDataTask *)sessionDataTaskWithApi:(MEApi *)api
                                       completion:(void(^)(id responseObject, NSURLSessionDataTask *task, NSError *error))completion {
     
