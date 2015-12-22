@@ -32,10 +32,12 @@
 }
 
 #pragma mark - Regular request
+
 - (NSURLSessionDataTask *)sessionDataTaskWithApi:(MEApi *)api
                                       completion:(void(^)(id responseObject, NSURLSessionDataTask *task, NSError *error))completion {
     
-    self.requestSerializer = [api serializer];
+    self.requestSerializer = [api requestSerializer];
+    self.responseSerializer = [api responseSerializer];
     
     NSURLSessionDataTask *task = [self dataTaskWithApi:api success:^(NSURLSessionDataTask *task, id responseObject) {
         completion(responseObject, task, nil);
@@ -48,6 +50,11 @@
     [task resume];
     
     return task;
+}
+
+- (NSURLSessionDataTask *)sessionMultipartDataTaskWithApi:(MEApi <MEMultipartFormApiProtocol> *)api
+                                               completion:(void(^)(id responseObject, NSURLSessionDataTask *task, NSError *error))completion {
+    return [self sessionDataTaskWithApi:api completion:completion];
 }
 
 - (NSString *)stringMethodWithRequestMethod:(MEApiMethod)requestMethod {

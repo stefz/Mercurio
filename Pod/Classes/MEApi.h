@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AFURLRequestSerialization.h>
+#import <AFURLResponseSerialization.h>
 
+FOUNDATION_EXPORT NSString * const kMETokenHeaderKey;
 FOUNDATION_EXPORT NSTimeInterval const kMEDefaultAPITimeout;
 
 @class AFHTTPRequestSerializer;
@@ -55,11 +58,18 @@ typedef NS_ENUM(NSInteger, MEApiMethod) {
 - (void)addHeader:(NSString *)header value:(id)value;
 
 /**
- *  Creates a serializer for the API. Prepares all headers and adds the authentication header.
+ *  Creates a request serializer for the API. Prepares all headers and adds the authentication header.
  *
  *  @return an instance of AFHTTPRequestSerializer
  */
-- (AFHTTPRequestSerializer *)serializer;
+- (AFHTTPRequestSerializer <AFURLRequestSerialization> *)requestSerializer;
+
+/**
+ *  Creates a response serializer for the API. Prepares all headers and adds the authentication header.
+ *
+ *  @return an instance of AFHTTPRequestSerializer
+ */
+- (AFHTTPResponseSerializer <AFURLResponseSerialization> *)responseSerializer;
 
 /**
  *  Creates a new API with a specified method, path and response object class

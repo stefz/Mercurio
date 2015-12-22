@@ -20,6 +20,8 @@
 
 @implementation MEViewController
 
+#pragma mark - View life cycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -28,11 +30,20 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
-    [self testMultipartPost];
 }
 
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Private methods
+
 - (void)testGetApi {
+    
+    AFHTTPResponseSerializer *responseSerializer = [AFHTTPResponseSerializer serializer];
+    [[MESessionManager sharedInstance] setResponseSerializer:responseSerializer];
+    
     MEApi *api = [MEApi apiWithMethod:MEApiMethodGET
                                  path:@"https://httpbin.org/get"
                         responseClass:[MEResponse class]
@@ -47,10 +58,7 @@
 }
 
 - (void)testMultipartPost {
-    
-    AFHTTPResponseSerializer *responseSerializer = [AFHTTPResponseSerializer serializer];
-    [[MESessionManager sharedInstance] setResponseSerializer:responseSerializer];
-    
+        
     NSArray *files = @[ UIImageJPEGRepresentation([self screenshot], 0.4) ];
     
     MEMultipartFormApi *api = [MEMultipartFormApi apiWithMethod:MEApiMethodPOST
@@ -89,11 +97,6 @@
                                                    }];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (UIImage *)screenshot {
     CGSize size = self.view.bounds.size;
     UIGraphicsBeginImageContextWithOptions(size, NO, [UIScreen mainScreen].scale);
@@ -102,6 +105,16 @@
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return image;
+}
+
+#pragma mark - IBActions
+
+- (IBAction)getButtomPressed:(id)sender {
+    [self testGetApi];
+}
+
+- (IBAction)postButtonPressed:(id)sender {
+    [self testMultipartPost];
 }
 
 @end

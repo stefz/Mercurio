@@ -23,7 +23,7 @@
                                     <constraint firstAttribute="height" constant="50" id="lC2-uH-gQg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="40"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Response" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yq4-HM-RCj">
@@ -33,13 +33,45 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hR5-Kw-Xa2">
+                                <rect key="frame" x="305" y="123" width="285" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="0DK-10-k6R"/>
+                                </constraints>
+                                <state key="normal" title="POST MULTIPART">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="postButtonPressed:" destination="whP-gf-Uak" eventType="touchUpInside" id="fcL-R5-Sch"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pzn-4D-IYT">
+                                <rect key="frame" x="10" y="123" width="285" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="e3Z-LV-YJP"/>
+                                </constraints>
+                                <state key="normal" title="GET">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getButtomPressed:" destination="whP-gf-Uak" eventType="touchUpInside" id="ePY-fF-BzR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Mvr-aV-6Um" firstAttribute="top" secondItem="yq4-HM-RCj" secondAttribute="bottom" id="6Th-E8-9du"/>
+                            <constraint firstItem="pzn-4D-IYT" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" constant="10" id="7ct-Vh-dWv"/>
                             <constraint firstAttribute="trailing" secondItem="yq4-HM-RCj" secondAttribute="trailing" constant="10" id="822-ov-Qhy"/>
+                            <constraint firstItem="pzn-4D-IYT" firstAttribute="width" secondItem="hR5-Kw-Xa2" secondAttribute="width" id="K74-kS-ffn"/>
+                            <constraint firstAttribute="trailing" secondItem="hR5-Kw-Xa2" secondAttribute="trailing" constant="10" id="Np7-mJ-VJQ"/>
+                            <constraint firstItem="pzn-4D-IYT" firstAttribute="top" secondItem="SPT-5F-MH1" secondAttribute="bottom" constant="23" id="Q8G-Hg-13s"/>
+                            <constraint firstItem="hR5-Kw-Xa2" firstAttribute="top" secondItem="SPT-5F-MH1" secondAttribute="bottom" constant="23" id="VND-Z8-9JL"/>
                             <constraint firstAttribute="trailing" secondItem="SPT-5F-MH1" secondAttribute="trailing" id="aYs-Kb-dCN"/>
                             <constraint firstItem="yq4-HM-RCj" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" constant="10" id="cLH-b3-LTd"/>
+                            <constraint firstItem="hR5-Kw-Xa2" firstAttribute="leading" secondItem="pzn-4D-IYT" secondAttribute="trailing" constant="10" id="cP7-Li-kSy"/>
                             <constraint firstItem="SPT-5F-MH1" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" id="dc6-Kl-gYL"/>
                             <constraint firstItem="SPT-5F-MH1" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="30" id="rjB-mu-e1b"/>
                             <constraint firstItem="yq4-HM-RCj" firstAttribute="top" secondItem="SPT-5F-MH1" secondAttribute="bottom" constant="100" id="sne-Qf-rvZ"/>

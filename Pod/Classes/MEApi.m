@@ -45,7 +45,7 @@ NSTimeInterval const kMEDefaultAPITimeout = 5;
     return _tokenHeaderName ?: kMETokenHeaderKey;
 }
 
-- (AFHTTPRequestSerializer *)serializer {
+- (AFHTTPRequestSerializer <AFURLRequestSerialization> *)requestSerializer {
     AFJSONRequestSerializer *serializer = [AFJSONRequestSerializer serializer];
     serializer.timeoutInterval = _timeout ?: kMEDefaultAPITimeout;
     
@@ -61,6 +61,10 @@ NSTimeInterval const kMEDefaultAPITimeout = 5;
     }
     
     return serializer;
+}
+
+- (AFHTTPResponseSerializer <AFURLResponseSerialization> *)responseSerializer {
+    return [AFJSONResponseSerializer serializer];
 }
 
 + (instancetype)apiWithMethod:(MEApiMethod)method path:(NSString *)path responseClass:(Class)responseClass jsonRoot:(NSString *)jsonRoot {
