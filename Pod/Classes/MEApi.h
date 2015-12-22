@@ -72,6 +72,13 @@ typedef NS_ENUM(NSInteger, MEApiMethod) {
 - (AFHTTPResponseSerializer <AFURLResponseSerialization> *)responseSerializer;
 
 /**
+ *  Configures the request serializer with autentication/users headers
+ *
+ *  @param serializer an instance of AFHTTPRequestSerializer
+ */
+- (void)defaultConfigurationWithRequestSerializer:(AFHTTPRequestSerializer <AFURLRequestSerialization> *)serializer;
+
+/**
  *  Creates a new API with a specified method, path and response object class
  *
  *  @param method        the API methos: GET, POST, PUT, DELETE, PATCH

@@ -22,16 +22,7 @@
     AFHTTPRequestSerializer *serializer = [AFHTTPRequestSerializer serializer];
     serializer.timeoutInterval = self.timeout ?: kMEDefaultAPITimeout;
     
-    [self.headers enumerateKeysAndObjectsUsingBlock:^(id field, id value, BOOL * __unused stop) {
-        [serializer setValue:value forHTTPHeaderField:field];
-    }];
-    
-    if (self.authentication == MEApiAuthenticationBasic) {
-        [serializer setAuthorizationHeaderFieldWithUsername:[[MECredentialManager sharedInstance] username]
-                                                   password:[[MECredentialManager sharedInstance] password]];
-    } else if (self.authentication == MEApiAuthenticationToken) {
-        [serializer setValue:[[MECredentialManager sharedInstance] token] forHTTPHeaderField:kMETokenHeaderKey];
-    }
+    [self defaultConfigurationWithRequestSerializer:serializer];
     
     return serializer;
 }

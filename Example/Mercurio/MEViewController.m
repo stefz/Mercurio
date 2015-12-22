@@ -25,7 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _logTextView.text = @"Waiting for a responce...";
+    _logTextView.text = @"Try GET and POST Multipart API...";
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -40,6 +40,8 @@
 #pragma mark - Private methods
 
 - (void)testGetApi {
+    
+    _logTextView.text = @"Waiting for a responce...";
     
     AFHTTPResponseSerializer *responseSerializer = [AFHTTPResponseSerializer serializer];
     [[MESessionManager sharedInstance] setResponseSerializer:responseSerializer];
@@ -58,6 +60,8 @@
 }
 
 - (void)testMultipartPost {
+    
+    _logTextView.text = @"Waiting for a responce...";
         
     NSArray *files = @[ UIImageJPEGRepresentation([self screenshot], 0.4) ];
     
