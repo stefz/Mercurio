@@ -68,7 +68,7 @@
     MEMultipartFormApi *api = [MEMultipartFormApi apiWithMethod:MEApiMethodPOST
                                                            path:@"http://posttestserver.com/post.php?dir=mercurio"
                                                   responseClass:[NSNull class]
-                                                       jsonRoot:@"headers"];
+                                                       jsonRoot:nil];
     
     [api setMultipartFormConstructingBodyBlock:^(id<AFMultipartFormData> formData) {
         int i = 0;
