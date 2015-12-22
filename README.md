@@ -77,13 +77,13 @@ Like the previous example, you must create an instance of MEMultipartFormApi. ME
 
 ```objective-c
 MEMultipartFormApi *api = [MEMultipartFormApi apiWithMethod:MEApiMethodPOST
-                                                           path:@"http://posttestserver.com/post.php?dir=mercurio"
-                                                  responseClass:[NSNull class]
-                                                       jsonRoot:nil];
+                                                       path:@"http://posttestserver.com/post.php?dir=mercurio"
+                                              responseClass:[NSNull class]
+                                                   jsonRoot:nil];
     
 [api setMultipartFormConstructingBodyBlock:^(id<AFMultipartFormData> formData) {
        [formData appendPartWithFileData:[NSData data]
-	                                   name:@""name"
+                                   name:@""name"
                                fileName:@"file.jpg"
                                mimeType:@"image/jpeg"];
 }];
