@@ -9,75 +9,73 @@
 /* Begin PBXBuildFile section */
 		00F09DB5E05D1208F27161E2F016FE36 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2B240D99C3FC6A7DC6C66A2434CA799 /* MobileCoreServices.framework */; };
 		022B549F10007177A43FAB1DD5114F7D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19DF616941A51576DD057A9FD8F4AD8 /* Security.framework */; };
-		02ED71B538BDF4867B00870BAC700363 /* Mercurio-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 74145C1629142533E7A8329814685353 /* Mercurio-dummy.m */; };
+		031C9308DA547EE55CAD1999744A6A19 /* MEApi.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D34EE0057749283DEC7D8261797A9D8 /* MEApi.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04A4FE6BC333B1FC7D35EADA8F59FAD6 /* MTLJSONAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = D93999ECE95970AA8771102FE72F7B28 /* MTLJSONAdapter.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		0563227B6D480B862CA5EF8C36DF51A4 /* MTLModel+NSCoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 309F9BA1DA33BB22129E18BE0B10CB84 /* MTLModel+NSCoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		06B93267BE4B80B2B4B91E5EFCE386D2 /* MTLModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28EAA38F89FD56F97136CAFE6F28FBCF /* MTLModel.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		08914B90EBCE4D97D4958976E35DAB9E /* MECredentialManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BB48BAC937FF3FF3B05224FB8C9504 /* MECredentialManager.m */; };
 		0A08FC71C4E3B8E0F8734BCDA7CCA7CB /* AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 18A09FFA5B2467662C13F7C00FDC76DE /* AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0A26F8DCA637797F8117F6273BEB971A /* MEApi.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2202599EF892ED2944CA98C66F0B7C /* MEApi.m */; };
 		0CCB6B307EBF17E2D0E3A6AD52F6F51E /* EXTScope.h in Headers */ = {isa = PBXBuildFile; fileRef = E9BA9E9FE67FAE5C771025BB98E3D39A /* EXTScope.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		0E802CCFD978605BDF60FBCC7A0151D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C31A9B26388001B26382C7C355DA572 /* Foundation.framework */; };
 		14CD3DFB4A25BAEFB205730FA6750025 /* AFAutoPurgingImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F176B5A7890D0C38D60F0998E5CDC1A /* AFAutoPurgingImageCache.m */; };
-		152AE756C87F6321A61C476EEEE02929 /* SSKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 5712571C5643547482C5337B05B396D8 /* SSKeychainQuery.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		15460ABD372C937E2A07A2FCDF98C473 /* UIActivityIndicatorView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 725CB25AE96426C7C0D697B15EBD875F /* UIActivityIndicatorView+AFNetworking.m */; };
 		17A59C9B4F5727FAF9E3A6D92A9FFABD /* EXTRuntimeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A27C91AB31515760F128CFBD51A6902 /* EXTRuntimeExtensions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		18192371B72C33AEE4D9E6F6AFE5225C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C31A9B26388001B26382C7C355DA572 /* Foundation.framework */; };
 		19D81E345715F41ED29349DBFF389D55 /* NSDictionary+MTLMappingAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 08C74B38DF4A61E69DE3AEBC11FA0324 /* NSDictionary+MTLMappingAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		19E6319F6ECED7539AABBD9A211F7AEC /* AFAutoPurgingImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = F77A0E20083116756CAD627080BBB2BD /* AFAutoPurgingImageCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D4B4562FC2035E4A7C9228EDEFD6A25 /* MEErrorHelperProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B522839BECF89A08D96D52F8077D4A0 /* MEErrorHelperProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2053D71CF543C3A3CC47C5409D61923C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57F2B5E013FD1D42752E768761E043FC /* CoreGraphics.framework */; };
 		23415204AA48A02959E4E5245CF96037 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 684BA045C55A9E3870BCB0E923924A70 /* AFHTTPSessionManager.m */; };
 		2359387620C5E815BF0594BC40311734 /* AFURLRequestSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 915B8DA9A90DD296FE94AD0252BD5A23 /* AFURLRequestSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B91954D1D8469415E1164E83DD3D3F1 /* NSValueTransformer+MTLInversionAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 24F548714A7AAB4F6AB2F7DADEA89C90 /* NSValueTransformer+MTLInversionAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2D097F9B47E61A2F9ED4053728DA7AE6 /* NSDictionary+MTLJSONKeyPath.m in Sources */ = {isa = PBXBuildFile; fileRef = DD218A944EC5F8792D2D7329A9360567 /* NSDictionary+MTLJSONKeyPath.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		2F8BA87770E070AF01888CA73E672D82 /* MESessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 96F73F5B6076C36DA9E9D478EE223DAB /* MESessionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		311E5200832E4AE174A193851A2C6317 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D18050D0888CE44D07C90A8DDF2193 /* AFSecurityPolicy.m */; };
+		31896C02D3377CA2ACD9473495941D05 /* MEMultipartFormApi.h in Headers */ = {isa = PBXBuildFile; fileRef = E0A8F9DE7CFD32C469281E475A39C136 /* MEMultipartFormApi.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		326A543AD4E39A2DAECA1CD385E3AEA2 /* AFImageDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E30B9C652653C1C6A73FFB6B0B7758F /* AFImageDownloader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3389D012F92ED551707B4AF299852E42 /* MEErrorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 084D688DE9DE72C56287E11361C80E16 /* MEErrorHelper.m */; };
 		3511AE7ADBB71D05565854F0E70B7D08 /* AFURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C2C040ABF6584A8C12D60DC442815EC /* AFURLSessionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38EEA9ED6B922946C54AD6BAC93B73AD /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = C0FD356C2A430C50A5D361E6B9F128E3 /* UIProgressView+AFNetworking.m */; };
 		3939531EB270B4145C7ADFBAB2E5695F /* AFNetworkActivityIndicatorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8086C1E6C330782E81C07E1F7781DA32 /* AFNetworkActivityIndicatorManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3B790BF8B5BE080BC62135335E33DB26 /* MECredentialManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B1F07EBC5A2011B445A80475413E170F /* MECredentialManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C43032339841F7D1D94EF12903A2272 /* MTLJSONAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 90125E2F675479C774D14D34916C699E /* MTLJSONAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3DA1A8A64D946E6A86C046EB76983434 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C31A9B26388001B26382C7C355DA572 /* Foundation.framework */; };
+		3CDF72AED81607416028C72B194BEBEA /* MEMultipartFormApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C46E0EC84FE9BF5A37262EC15D92011F /* MEMultipartFormApi.m */; };
 		41C46F19A2CE1E29840F226638A10678 /* metamacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 31E8E057AA814A26EA627B21D4EFDC6A /* metamacros.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		424FEE1ACF61F1E0D6D5F99E7E43238B /* MEErrorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7419FBB024D36ECBD7F0ACCC9919B9CD /* MEErrorHelper.m */; };
 		43098B12DF5546CB576986E68DBCAFCA /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D2ABE89DAB104F1444C1D5E5C79349B8 /* AFNetworkReachabilityManager.m */; };
-		45B48E8F6C014911D7D5694652B4323F /* MEApi.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ADAB34710B9BA967C4119DB7686C786 /* MEApi.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		43DEF0D3E8D40A3D4E54D98D0F6FEB0E /* MEApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9EBABB94F62E56BE0374FCC1EDFF26 /* MEApi.m */; };
 		495E27E8D0F85F4008E237D0F29EA8AC /* NSError+MTLModelException.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A897D9EEBA900117166E16463B5AF24 /* NSError+MTLModelException.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4980C203311F9A91EF1A1FCAEC09EBD2 /* EXTRuntimeExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2141E50BD1BA5673347A6FE1AFA64A49 /* EXTRuntimeExtensions.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		4BA19F7DD8F9FDA648137B2CE89E7588 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1BFAF52EE9A3AB1A900E19B5E783D2 /* AFNetworkActivityIndicatorManager.m */; };
 		4BABB4C716353500FDF75187D35DAACF /* MTLModel.h in Headers */ = {isa = PBXBuildFile; fileRef = FDAAFBBD663A42FD1031ADA2F2E8BF97 /* MTLModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4FBC5AC0F8C24799F983ACBA0BB981FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C31A9B26388001B26382C7C355DA572 /* Foundation.framework */; };
-		4FFB3AE23BB63FFB9334454330002920 /* MEConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 0001499DDC7C431A7B7AB19908C3C028 /* MEConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5152C5234A31B04255550E25C74F1D90 /* MEMultipartFormApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E489E16FC8ED76AC85C89C7A629D9E /* MEMultipartFormApi.m */; };
 		52B96AC796E60DBF61A11151FD25CEE8 /* NSObject+MTLComparisonAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A49D79284DA2A3FEB8F33A419782C3E5 /* NSObject+MTLComparisonAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		542A74473DEBCC4A4A8EFD7219D2957B /* MTLValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 40ECC7D6E9ED34C1C5A87DF6A8828D65 /* MTLValueTransformer.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		59D6C8B782E1763233D94F724CB61BFC /* MEKeyChain.h in Headers */ = {isa = PBXBuildFile; fileRef = 705FA8616170BD2CD8FFAB37D0150702 /* MEKeyChain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		544F69F729B6450DBAF04D57940E857F /* MEModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3782611C11E6DC65EC1E6B05EB4E33 /* MEModel.m */; };
+		5851884950F811878086227E0D8D1561 /* SSKeychainQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E606B7902D11C66A1A4253C14EC96D /* SSKeychainQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5D52DB6DF2E6C24CECB0015A9177A2E1 /* UIProgressView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B249D2DC63B7D559D8D0A1AC6C5571B /* UIProgressView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		606C755FBD74C05919C779126BA798E1 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = C14C9E6F53EB604514983A0D090796E3 /* SSKeychain.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		6083F51989A0009C740D92767F4DC1FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C31A9B26388001B26382C7C355DA572 /* Foundation.framework */; };
 		617D8A23A6E52FB2241EF05C73DDABED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C31A9B26388001B26382C7C355DA572 /* Foundation.framework */; };
-		628B06686A3AD70FE54AE0999B89E598 /* MEKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BED4C10F9007F291F637A92B5893F9 /* MEKeyChain.m */; };
+		619A4CA860D54A32EF18A3341A74F1F9 /* MECredentialManager.h in Headers */ = {isa = PBXBuildFile; fileRef = CFD0A0DCE204582419191EFF745FCA3E /* MECredentialManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		660A0DD1E1C5AEB5D6891F4328996FF4 /* SSKeychain-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE53AC7104674DBF527D240E8E68A39 /* SSKeychain-dummy.m */; };
+		6652A93A3F5FF42C1D4AD33DAF04072D /* SSKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 5712571C5643547482C5337B05B396D8 /* SSKeychainQuery.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		6672A2EFC9413A1DE45CAF0A950CCAAE /* MTLTransformerErrorHandling.m in Sources */ = {isa = PBXBuildFile; fileRef = 19DACF0DD764E0DD5E05EC55297AE819 /* MTLTransformerErrorHandling.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		669FAFC1DA77D8FF3171FA45F80A0AB8 /* Mantle-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 545ACFD4BD82EA73AAE5FEFA8BBB4ECA /* Mantle-dummy.m */; };
 		6B45ADBBD4925214FD239E8C25214C87 /* NSDictionary+MTLManipulationAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D5D5371F39CC93F8F2CDC9A6BA3DAC8E /* NSDictionary+MTLManipulationAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6B466F777E08C7B537EAE60D0A9B2DEA /* MEErrorHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = D7827893447A3C2081948E0D4309875F /* MEErrorHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B6012E259B1804C7CC8D36A07252B07 /* NSError+MTLModelException.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B330D46400CB368DCA7A6761BD6A222 /* NSError+MTLModelException.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		6B7A87A2786BA679C9A196A26EDA3B76 /* SSKeychain.h in Headers */ = {isa = PBXBuildFile; fileRef = F50DA393EC7C662D5E552EF5BCE4D5B9 /* SSKeychain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6EC97BDB3FC508526F9E388095A7DDCC /* UIImageView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 25B62E935ECCFEF5CAB1BDEB372D44DD /* UIImageView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		72A7C7EA5AB83DBDE385CBE151324F5F /* MEModel.h in Headers */ = {isa = PBXBuildFile; fileRef = D012BC0A66D29FE3AD3F6E1B56DE1A10 /* MEModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7632A90850BF21261FD1585914D71E98 /* NSObject+MTLComparisonAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AF34D22A9F261F43E943315FD53C54DE /* NSObject+MTLComparisonAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		784E07C8B9704257D10696DD47E2A3B4 /* NSValueTransformer+MTLPredefinedTransformerAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 860393A3BE6D898393B037B4E9073295 /* NSValueTransformer+MTLPredefinedTransformerAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		78940A6980F359C4304C695EF6E67C5D /* UIButton+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF8AE6ED86FAE80593A07C589DE720F /* UIButton+AFNetworking.m */; };
 		7E5C71195CF0F35F44FDA4D355CFE73C /* NSArray+MTLManipulationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EED5A711122B31D8EC389E024214AC21 /* NSArray+MTLManipulationAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		7F0578A0258E02384F6229C678E60D31 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 6039083182EC87D01235E8C5D3DB67A0 /* UIRefreshControl+AFNetworking.m */; };
-		816FFDE02F938DE8E8D87F0BC69ADAFB /* SSKeychain-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE53AC7104674DBF527D240E8E68A39 /* SSKeychain-dummy.m */; };
+		816662CABFAE93DA870E9AB8EF41E552 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = C14C9E6F53EB604514983A0D090796E3 /* SSKeychain.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		830050886B18F54E17F117FD8EFC717B /* UIActivityIndicatorView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = FEDE6C37A35A79CD7690009B3295D7E5 /* UIActivityIndicatorView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		85FAB6F1D2FE0598BF2E61D7BB084B8D /* UIKit+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = BC6E3CDA203BF61B3149165F2E4E0927 /* UIKit+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		86D4524BE366ED46510B5303BE96CF75 /* MEModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 31DE88D3EEAD72E9FB7CAC53584D986E /* MEModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8E82178CC9BD8BE3DBF2C10E33807AEB /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 8572915D575EC80CE3DEDB7F6EE4AE74 /* AFURLRequestSerialization.m */; };
+		8F75345E1758BAF4D9B048A730046F09 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C31A9B26388001B26382C7C355DA572 /* Foundation.framework */; };
+		94378EDB98EEFC4E88C4325AF4C6F727 /* MEKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 446C3514EBE7471ED666DC189DD749CA /* MEKeyChain.m */; };
 		944BC5B32BE8AFDE9A1E1B88C7F7E86D /* NSDictionary+MTLManipulationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC2FE16DD9A48BD11E5795928B9F64B /* NSDictionary+MTLManipulationAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		9543DC81B3F035E8C5768FB50B7146F1 /* MTLModel+NSCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = E02C875B5A73CB22FC3204373045001E /* MTLModel+NSCoding.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		99221FF7C7EEBD782C71851DD0BB06AE /* MECredentialManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A9CDF010968EB4D6014C8B4F8FCF66 /* MECredentialManager.m */; };
 		9BB66BC3A3E2C0AB0BA3ACE98373EF30 /* MTLReflection.h in Headers */ = {isa = PBXBuildFile; fileRef = A816BE0442C86083D7E46C7EABFE5E9E /* MTLReflection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9E7DBB207B576DC0EE2CDA8B3CBFB487 /* MEKeyChain.h in Headers */ = {isa = PBXBuildFile; fileRef = 759F74627566E21C2927CF7D9447273A /* MEKeyChain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6A10815B0F4B3A1EB7C9776BA806A2F /* MEErrorHelperProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = EDD9785D2166500AD4FA23AD2866BE9B /* MEErrorHelperProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A8FC6A53F6C1CB4DEFD972664E1AF3B1 /* AFNetworking-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7AEEDEEC6A963741BE071F23DA6A81 /* AFNetworking-dummy.m */; };
 		ACE9C1A6E8D5121C6C5F907C7A9CFCC9 /* UIRefreshControl+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = E163953C7459F48FE34D1F2B8E0B1BBF /* UIRefreshControl+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD359A96DD4AA2C962E50A5CD5524F54 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9B5CA79E0B611849E2E15661964E73 /* UIWebView+AFNetworking.m */; };
@@ -86,30 +84,30 @@
 		B51AA1F7701DCDBCC9B88A15320F9C2C /* AFURLResponseSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D8D4D03A952FD0396A6F7631D28BE54 /* AFURLResponseSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B5CF67F7870BAB70A76E57479B706B42 /* UIWebView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 607FFFC9A621DFEEEB18A497CD6D4BA1 /* UIWebView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B6E1E26869BC3BFBEAD1B6F35F5A670D /* NSValueTransformer+MTLInversionAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 973BD390D1C69AE4C5ABCFDCFC415357 /* NSValueTransformer+MTLInversionAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		B75EFBA5A9AE0F116FF9A44706C9623C /* SSKeychainQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E606B7902D11C66A1A4253C14EC96D /* SSKeychainQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BAE29EFF696E9062CE0DFB3887FF9806 /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E5ED872F8CA944B92C8540A3FF96EB /* EXTScope.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		BD5D2F2B858840D364CD2D02FF02C4D2 /* MEConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F3B524772C00E8F96CC41CF0D38390 /* MEConstants.m */; };
-		BE74E975C85221A660F3701EC26572E9 /* MESessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4709E404787BB91371AC5C44C0A727 /* MESessionManager.m */; };
 		C0B7827E6FEB64AEA58656D1DE343E63 /* NSDictionary+MTLMappingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8488419E625D4A555DA7C07B45DF88 /* NSDictionary+MTLMappingAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		C1B65C3D849FEE4FB5298A8135A765DA /* UIImage+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = F5FF78B60D3D1DDF73B15A59A18BD0DF /* UIImage+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C2201E34603B014192F0967473518496 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 5012163A8CA3A3EEF7802698BC925220 /* AFURLResponseSerialization.m */; };
-		C646F6EA63394A78B2733912DAFEF32C /* MEMultipartFormApiProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DB128A7FBB9629DA247B19D1A0F6490A /* MEMultipartFormApiProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C55D6D53EB7FB4078E0BCE3A3004D98C /* MEErrorHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C54D66ACD8093BEC180869F06887103 /* MEErrorHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CE8965366A3B07A6C0615055A31B8B83 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C168D5DBDB78691493E24B13EF6B6A8 /* SystemConfiguration.framework */; };
 		D1A08D7B676CB358664FE1A7EE3472E3 /* NSArray+MTLManipulationAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = F35AF8D4D126D26C14F03F55B9E746DD /* NSArray+MTLManipulationAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D25AA59372C9086C7413382F93212A48 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19DF616941A51576DD057A9FD8F4AD8 /* Security.framework */; };
 		D31FEE51AF4BE2A6CC059F80B983CD3B /* AFImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC6DA37D5A922CADC0603A1CBDE5A9B /* AFImageDownloader.m */; };
+		D38256C06A446C17D21C8117EE3E5AA1 /* MESessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 01711C5954B75451E1DADB28A3B7333A /* MESessionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D6A4169868AB6DBDBF08513300A97948 /* Pods-Mercurio_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 78378E358CEBE5781944D73AE43EB516 /* Pods-Mercurio_Tests-dummy.m */; };
-		D7B21803582D131E4667790B63FAF189 /* MEMultipartFormApi.h in Headers */ = {isa = PBXBuildFile; fileRef = DBB5EFBEB85D99191851E7F353EC5B71 /* MEMultipartFormApi.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DFDAC8245626953C4BCE5A2DA6BE2A5B /* AFSecurityPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = E4B9C1318C44C18984FDFFDD469B6F78 /* AFSecurityPolicy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E212C2AA95E8F6EFB69A5F1455F291F8 /* UIButton+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = EEAB67158B1F52C9968B613E8F9E6DFD /* UIButton+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E36EC250BC81830D6B6DA3E16E2AA501 /* MESessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E00D6C6AC8816C3F1A2644B6471FDD /* MESessionManager.m */; };
 		E72FE1FA640F108A9769E9661E34F3BF /* NSDictionary+MTLJSONKeyPath.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C7B85F3EC25DFF8C65EADF4D2C55B6D /* NSDictionary+MTLJSONKeyPath.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA63AB5A15FFDBF6F1AE43B882E6A9BE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19DF616941A51576DD057A9FD8F4AD8 /* Security.framework */; };
 		ED69D9B5A342FE9BD3F170D5CDDEC948 /* AFNetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D8D7A19F19045CC5BA74C2174EFCB5D /* AFNetworkReachabilityManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EEF2248467AB8464AB72CB730C7FE178 /* NSValueTransformer+MTLPredefinedTransformerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E3EE605F905FD0C32F19B40EDADF8F /* NSValueTransformer+MTLPredefinedTransformerAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		F0D2DF741E4223975FD166C5C101479F /* MTLValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B890D91755DB793D7D12590008317F /* MTLValueTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F2371D70172CFE41F4246B262398B93C /* MEModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 409B8D33A851D878D9C98ECD99A619F3 /* MEModel.m */; };
+		F2CE5EE5DE46A09ACC442488B92A4038 /* MEMultipartFormApiProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DDD93DA9827FD62BBD656C7C17C860FD /* MEMultipartFormApiProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3774B1449FCE5B3CA3E1B336E11D284 /* AFHTTPSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 42AB6C07E8743C813C2D97031193AD50 /* AFHTTPSessionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F7B7585021FEDC680689A7B49F8BA3ED /* MTLTransformerErrorHandling.h in Headers */ = {isa = PBXBuildFile; fileRef = D98674EABC52791054B6203259513630 /* MTLTransformerErrorHandling.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F8FF07D76760D6A2FF269061E11A8B31 /* EXTKeyPathCoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 527FFD83181A70EA67A2B23E4B9B93EC /* EXTKeyPathCoding.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		FA43EB9240683966A0AFB651EE82F369 /* Mercurio-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 74145C1629142533E7A8329814685353 /* Mercurio-dummy.m */; };
+		FBA447B06D3BC0AF5623AA0D64C96224 /* SSKeychain.h in Headers */ = {isa = PBXBuildFile; fileRef = F50DA393EC7C662D5E552EF5BCE4D5B9 /* SSKeychain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FCDDD3BC67EA205C87238A2A87D5C36C /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E98600F41B8578388932BA76D5D4F69E /* AFURLSessionManager.m */; };
 		FD913ECF18E91FD4D8EE34BA8170DB4F /* MTLReflection.m in Sources */ = {isa = PBXBuildFile; fileRef = E03C00C2EC39C194841F347D20607259 /* MTLReflection.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		FE983ADC2960099312AF536D2916BC7A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C31A9B26388001B26382C7C355DA572 /* Foundation.framework */; };
@@ -117,6 +115,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1181516083E05EB4D975F0E925D27675 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B487E9AF388ADCEC89E429C7F6DE41DE;
+			remoteInfo = SSKeychain;
+		};
 		17A9CB5090A819B39CD79672F07E0ED3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -124,7 +129,7 @@
 			remoteGlobalIDString = 426BC4549A625B5E1E4200D5261A98BF;
 			remoteInfo = Mantle;
 		};
-		2E5D11345F94BD6FE020164F39C8BE29 /* PBXContainerItemProxy */ = {
+		3D0534D31F852AD2CBA7B7137672B790 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -135,15 +140,15 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 7591A07ECE0BB313295AD0A745283C6B;
+			remoteGlobalIDString = B487E9AF388ADCEC89E429C7F6DE41DE;
 			remoteInfo = SSKeychain;
 		};
-		6BDD0AF7FA3F105DA7E44FAC05D7E3C5 /* PBXContainerItemProxy */ = {
+		72115A37FC69691D15E37EC43FCAAD8A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 7591A07ECE0BB313295AD0A745283C6B;
-			remoteInfo = SSKeychain;
+			remoteGlobalIDString = FED92086C29EC07DB9F0D5F080CE7AF6;
+			remoteInfo = "Mercurio-Mercurio";
 		};
 		7D8AD6246504C46DA1F607DD55085F24 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -152,18 +157,11 @@
 			remoteGlobalIDString = 928353533005A4198EBDA5B700D37B64;
 			remoteInfo = AFNetworking;
 		};
-		820B143BFEFE59DF232C1F488DDAB074 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6894D3FFA230C07F8DF9BBD3E6567267;
-			remoteInfo = "Mercurio-Mercurio";
-		};
 		85F4C56D0E49E4DF0EC037C2E94D265D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 7591A07ECE0BB313295AD0A745283C6B;
+			remoteGlobalIDString = B487E9AF388ADCEC89E429C7F6DE41DE;
 			remoteInfo = SSKeychain;
 		};
 		A4AD0640F6C9278CEAF6FB09C0A344B6 /* PBXContainerItemProxy */ = {
@@ -173,14 +171,14 @@
 			remoteGlobalIDString = 928353533005A4198EBDA5B700D37B64;
 			remoteInfo = AFNetworking;
 		};
-		B3C9DDFE895C4FBE423F61EA4E9D09DA /* PBXContainerItemProxy */ = {
+		AEA55FEB013E4787AD642EE413E2D751 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 426BC4549A625B5E1E4200D5261A98BF;
 			remoteInfo = Mantle;
 		};
-		C4DFB635F30824C857E9889B86BEF124 /* PBXContainerItemProxy */ = {
+		B3C9DDFE895C4FBE423F61EA4E9D09DA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -191,24 +189,22 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 820D045FF92ED0ABD2BA26603159FA34;
+			remoteGlobalIDString = 4A17483F854753BD25DFE2596DD7B046;
 			remoteInfo = Mercurio;
 		};
 		F50FCF3CE8DE721640DFAB3A96CC7A90 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 820D045FF92ED0ABD2BA26603159FA34;
+			remoteGlobalIDString = 4A17483F854753BD25DFE2596DD7B046;
 			remoteInfo = Mercurio;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0001499DDC7C431A7B7AB19908C3C028 /* MEConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MEConstants.h; sourceTree = "<group>"; };
+		01711C5954B75451E1DADB28A3B7333A /* MESessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MESessionManager.h; sourceTree = "<group>"; };
 		04C5CDD8C2841853F6F0A9C8592A1064 /* Pods-Mercurio_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Mercurio_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		084D688DE9DE72C56287E11361C80E16 /* MEErrorHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MEErrorHelper.m; sourceTree = "<group>"; };
 		08C74B38DF4A61E69DE3AEBC11FA0324 /* NSDictionary+MTLMappingAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+MTLMappingAdditions.h"; path = "Mantle/NSDictionary+MTLMappingAdditions.h"; sourceTree = "<group>"; };
-		09E489E16FC8ED76AC85C89C7A629D9E /* MEMultipartFormApi.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MEMultipartFormApi.m; sourceTree = "<group>"; };
 		0B7AEEDEEC6A963741BE071F23DA6A81 /* AFNetworking-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AFNetworking-dummy.m"; sourceTree = "<group>"; };
 		0BFFEDC8A88316FE644E56D207673F56 /* SSKeychain-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSKeychain-prefix.pch"; sourceTree = "<group>"; };
 		0CACB7193CDA51199DB0A8D7EA58EEBD /* Mantle.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Mantle.xcconfig; sourceTree = "<group>"; };
@@ -217,24 +213,22 @@
 		1620CA8C1CBBD430422DB1D02CEBA190 /* Mercurio.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Mercurio.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A09FFA5B2467662C13F7C00FDC76DE /* AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworking.h; path = AFNetworking/AFNetworking.h; sourceTree = "<group>"; };
 		19DACF0DD764E0DD5E05EC55297AE819 /* MTLTransformerErrorHandling.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MTLTransformerErrorHandling.m; path = Mantle/MTLTransformerErrorHandling.m; sourceTree = "<group>"; };
-		20BED4C10F9007F291F637A92B5893F9 /* MEKeyChain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MEKeyChain.m; sourceTree = "<group>"; };
 		2141E50BD1BA5673347A6FE1AFA64A49 /* EXTRuntimeExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXTRuntimeExtensions.h; path = Mantle/extobjc/EXTRuntimeExtensions.h; sourceTree = "<group>"; };
+		23E00D6C6AC8816C3F1A2644B6471FDD /* MESessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MESessionManager.m; sourceTree = "<group>"; };
 		24F548714A7AAB4F6AB2F7DADEA89C90 /* NSValueTransformer+MTLInversionAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSValueTransformer+MTLInversionAdditions.h"; path = "Mantle/NSValueTransformer+MTLInversionAdditions.h"; sourceTree = "<group>"; };
 		25B62E935ECCFEF5CAB1BDEB372D44DD /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+AFNetworking.h"; path = "UIKit+AFNetworking/UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		28416CAF8848FDD56AFD954B11D79F6C /* Pods-Mercurio_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Mercurio_Example-dummy.m"; sourceTree = "<group>"; };
 		28EAA38F89FD56F97136CAFE6F28FBCF /* MTLModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MTLModel.m; path = Mantle/MTLModel.m; sourceTree = "<group>"; };
 		2A897D9EEBA900117166E16463B5AF24 /* NSError+MTLModelException.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSError+MTLModelException.h"; path = "Mantle/NSError+MTLModelException.h"; sourceTree = "<group>"; };
 		309F9BA1DA33BB22129E18BE0B10CB84 /* MTLModel+NSCoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MTLModel+NSCoding.h"; path = "Mantle/MTLModel+NSCoding.h"; sourceTree = "<group>"; };
-		31DE88D3EEAD72E9FB7CAC53584D986E /* MEModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MEModel.h; sourceTree = "<group>"; };
 		31E8E057AA814A26EA627B21D4EFDC6A /* metamacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = metamacros.h; path = Mantle/extobjc/metamacros.h; sourceTree = "<group>"; };
 		32B890D91755DB793D7D12590008317F /* MTLValueTransformer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MTLValueTransformer.h; path = Mantle/MTLValueTransformer.h; sourceTree = "<group>"; };
 		373CE964CF48DF47D19A0F60B096CB2A /* Mercurio-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Mercurio-prefix.pch"; sourceTree = "<group>"; };
 		3A51EE29C67BF1F174C69E81E1D1F023 /* Pods-Mercurio_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Mercurio_Example.release.xcconfig"; sourceTree = "<group>"; };
-		3ADAB34710B9BA967C4119DB7686C786 /* MEApi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MEApi.h; sourceTree = "<group>"; };
-		409B8D33A851D878D9C98ECD99A619F3 /* MEModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MEModel.m; sourceTree = "<group>"; };
+		3E9EBABB94F62E56BE0374FCC1EDFF26 /* MEApi.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MEApi.m; sourceTree = "<group>"; };
 		40ECC7D6E9ED34C1C5A87DF6A8828D65 /* MTLValueTransformer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MTLValueTransformer.m; path = Mantle/MTLValueTransformer.m; sourceTree = "<group>"; };
 		42AB6C07E8743C813C2D97031193AD50 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPSessionManager.h; path = AFNetworking/AFHTTPSessionManager.h; sourceTree = "<group>"; };
-		44F3B524772C00E8F96CC41CF0D38390 /* MEConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MEConstants.m; sourceTree = "<group>"; };
+		446C3514EBE7471ED666DC189DD749CA /* MEKeyChain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MEKeyChain.m; sourceTree = "<group>"; };
 		4853744C0005F8DCC284D5C62093673F /* Pods-Mercurio_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Mercurio_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		4CA35DC59175769FA1EAFABE6AF372CC /* Pods-Mercurio_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Mercurio_Example-frameworks.sh"; sourceTree = "<group>"; };
 		4D40500EBB0C64C2BF4C3F40D237A281 /* Pods-Mercurio_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Mercurio_Tests-frameworks.sh"; sourceTree = "<group>"; };
@@ -250,18 +244,20 @@
 		61C9D5C55B29B4AE66DEB2B491D40E22 /* libPods-Mercurio_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Mercurio_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		64D18050D0888CE44D07C90A8DDF2193 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFSecurityPolicy.m; path = AFNetworking/AFSecurityPolicy.m; sourceTree = "<group>"; };
 		684BA045C55A9E3870BCB0E923924A70 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPSessionManager.m; path = AFNetworking/AFHTTPSessionManager.m; sourceTree = "<group>"; };
-		6B522839BECF89A08D96D52F8077D4A0 /* MEErrorHelperProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MEErrorHelperProtocol.h; sourceTree = "<group>"; };
 		6F176B5A7890D0C38D60F0998E5CDC1A /* AFAutoPurgingImageCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFAutoPurgingImageCache.m; path = "UIKit+AFNetworking/AFAutoPurgingImageCache.m"; sourceTree = "<group>"; };
 		6F9B5CA79E0B611849E2E15661964E73 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIWebView+AFNetworking.m"; path = "UIKit+AFNetworking/UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
-		705FA8616170BD2CD8FFAB37D0150702 /* MEKeyChain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MEKeyChain.h; sourceTree = "<group>"; };
+		70BB48BAC937FF3FF3B05224FB8C9504 /* MECredentialManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MECredentialManager.m; sourceTree = "<group>"; };
 		70E606B7902D11C66A1A4253C14EC96D /* SSKeychainQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSKeychainQuery.h; path = SSKeychain/SSKeychainQuery.h; sourceTree = "<group>"; };
 		725CB25AE96426C7C0D697B15EBD875F /* UIActivityIndicatorView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIActivityIndicatorView+AFNetworking.m"; path = "UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m"; sourceTree = "<group>"; };
 		74145C1629142533E7A8329814685353 /* Mercurio-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Mercurio-dummy.m"; sourceTree = "<group>"; };
+		7419FBB024D36ECBD7F0ACCC9919B9CD /* MEErrorHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MEErrorHelper.m; sourceTree = "<group>"; };
 		74416017CC98600E0B66AEC676F53A51 /* Pods-Mercurio_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Mercurio_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		759F74627566E21C2927CF7D9447273A /* MEKeyChain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MEKeyChain.h; sourceTree = "<group>"; };
 		78378E358CEBE5781944D73AE43EB516 /* Pods-Mercurio_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Mercurio_Tests-dummy.m"; sourceTree = "<group>"; };
 		7A27C91AB31515760F128CFBD51A6902 /* EXTRuntimeExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EXTRuntimeExtensions.m; path = Mantle/extobjc/EXTRuntimeExtensions.m; sourceTree = "<group>"; };
 		7C168D5DBDB78691493E24B13EF6B6A8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		7C7B85F3EC25DFF8C65EADF4D2C55B6D /* NSDictionary+MTLJSONKeyPath.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+MTLJSONKeyPath.h"; path = "Mantle/NSDictionary+MTLJSONKeyPath.h"; sourceTree = "<group>"; };
+		7D34EE0057749283DEC7D8261797A9D8 /* MEApi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MEApi.h; sourceTree = "<group>"; };
 		7D8D7A19F19045CC5BA74C2174EFCB5D /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkReachabilityManager.h; path = AFNetworking/AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
 		8086C1E6C330782E81C07E1F7781DA32 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkActivityIndicatorManager.h; path = "UIKit+AFNetworking/AFNetworkActivityIndicatorManager.h"; sourceTree = "<group>"; };
 		8572915D575EC80CE3DEDB7F6EE4AE74 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLRequestSerialization.m; path = AFNetworking/AFURLRequestSerialization.m; sourceTree = "<group>"; };
@@ -269,14 +265,14 @@
 		892575AABE9C8A936BAF98F50A5636A0 /* libSSKeychain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSSKeychain.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		90125E2F675479C774D14D34916C699E /* MTLJSONAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MTLJSONAdapter.h; path = Mantle/MTLJSONAdapter.h; sourceTree = "<group>"; };
 		915B8DA9A90DD296FE94AD0252BD5A23 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLRequestSerialization.h; path = AFNetworking/AFURLRequestSerialization.h; sourceTree = "<group>"; };
-		93A9CDF010968EB4D6014C8B4F8FCF66 /* MECredentialManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MECredentialManager.m; sourceTree = "<group>"; };
-		96F73F5B6076C36DA9E9D478EE223DAB /* MESessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MESessionManager.h; sourceTree = "<group>"; };
 		973BD390D1C69AE4C5ABCFDCFC415357 /* NSValueTransformer+MTLInversionAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSValueTransformer+MTLInversionAdditions.m"; path = "Mantle/NSValueTransformer+MTLInversionAdditions.m"; sourceTree = "<group>"; };
 		9A460D29CC8772D7EB7477D00D90A9B1 /* libAFNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAFNetworking.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B249D2DC63B7D559D8D0A1AC6C5571B /* UIProgressView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIProgressView+AFNetworking.h"; path = "UIKit+AFNetworking/UIProgressView+AFNetworking.h"; sourceTree = "<group>"; };
 		9B330D46400CB368DCA7A6761BD6A222 /* NSError+MTLModelException.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSError+MTLModelException.m"; path = "Mantle/NSError+MTLModelException.m"; sourceTree = "<group>"; };
+		9B3782611C11E6DC65EC1E6B05EB4E33 /* MEModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MEModel.m; sourceTree = "<group>"; };
 		9C2C040ABF6584A8C12D60DC442815EC /* AFURLSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLSessionManager.h; path = AFNetworking/AFURLSessionManager.h; sourceTree = "<group>"; };
 		9C31A9B26388001B26382C7C355DA572 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		9C54D66ACD8093BEC180869F06887103 /* MEErrorHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MEErrorHelper.h; sourceTree = "<group>"; };
 		9CC2FE16DD9A48BD11E5795928B9F64B /* NSDictionary+MTLManipulationAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+MTLManipulationAdditions.m"; path = "Mantle/NSDictionary+MTLManipulationAdditions.m"; sourceTree = "<group>"; };
 		9D8D4D03A952FD0396A6F7631D28BE54 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLResponseSerialization.h; path = AFNetworking/AFURLResponseSerialization.h; sourceTree = "<group>"; };
 		9E30B9C652653C1C6A73FFB6B0B7758F /* AFImageDownloader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFImageDownloader.h; path = "UIKit+AFNetworking/AFImageDownloader.h"; sourceTree = "<group>"; };
@@ -286,10 +282,8 @@
 		A19DF616941A51576DD057A9FD8F4AD8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		A49D79284DA2A3FEB8F33A419782C3E5 /* NSObject+MTLComparisonAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MTLComparisonAdditions.h"; path = "Mantle/NSObject+MTLComparisonAdditions.h"; sourceTree = "<group>"; };
 		A816BE0442C86083D7E46C7EABFE5E9E /* MTLReflection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MTLReflection.h; path = Mantle/MTLReflection.h; sourceTree = "<group>"; };
-		AC2202599EF892ED2944CA98C66F0B7C /* MEApi.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MEApi.m; sourceTree = "<group>"; };
 		ADF8AE6ED86FAE80593A07C589DE720F /* UIButton+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+AFNetworking.m"; path = "UIKit+AFNetworking/UIButton+AFNetworking.m"; sourceTree = "<group>"; };
 		AF34D22A9F261F43E943315FD53C54DE /* NSObject+MTLComparisonAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MTLComparisonAdditions.m"; path = "Mantle/NSObject+MTLComparisonAdditions.m"; sourceTree = "<group>"; };
-		B1F07EBC5A2011B445A80475413E170F /* MECredentialManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MECredentialManager.h; sourceTree = "<group>"; };
 		B3A173647ED886A98829F75F1F01D377 /* Mercurio.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Mercurio.xcconfig; sourceTree = "<group>"; };
 		B716989C451349D4D8C27C9C533D124C /* Pods-Mercurio_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Mercurio_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -299,25 +293,28 @@
 		C0FD356C2A430C50A5D361E6B9F128E3 /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIProgressView+AFNetworking.m"; path = "UIKit+AFNetworking/UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
 		C14C9E6F53EB604514983A0D090796E3 /* SSKeychain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSKeychain.m; path = SSKeychain/SSKeychain.m; sourceTree = "<group>"; };
 		C2B240D99C3FC6A7DC6C66A2434CA799 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
+		C46E0EC84FE9BF5A37262EC15D92011F /* MEMultipartFormApi.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MEMultipartFormApi.m; sourceTree = "<group>"; };
+		CFD0A0DCE204582419191EFF745FCA3E /* MECredentialManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MECredentialManager.h; sourceTree = "<group>"; };
+		D012BC0A66D29FE3AD3F6E1B56DE1A10 /* MEModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MEModel.h; sourceTree = "<group>"; };
 		D2ABE89DAB104F1444C1D5E5C79349B8 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkReachabilityManager.m; path = AFNetworking/AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
 		D5D5371F39CC93F8F2CDC9A6BA3DAC8E /* NSDictionary+MTLManipulationAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+MTLManipulationAdditions.h"; path = "Mantle/NSDictionary+MTLManipulationAdditions.h"; sourceTree = "<group>"; };
 		D5E5ED872F8CA944B92C8540A3FF96EB /* EXTScope.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EXTScope.m; path = Mantle/extobjc/EXTScope.m; sourceTree = "<group>"; };
-		D7827893447A3C2081948E0D4309875F /* MEErrorHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MEErrorHelper.h; sourceTree = "<group>"; };
 		D825E752FC17F617968FDF0454E9E060 /* Pods-Mercurio_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Mercurio_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D93999ECE95970AA8771102FE72F7B28 /* MTLJSONAdapter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MTLJSONAdapter.m; path = Mantle/MTLJSONAdapter.m; sourceTree = "<group>"; };
 		D98674EABC52791054B6203259513630 /* MTLTransformerErrorHandling.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MTLTransformerErrorHandling.h; path = Mantle/MTLTransformerErrorHandling.h; sourceTree = "<group>"; };
-		DB128A7FBB9629DA247B19D1A0F6490A /* MEMultipartFormApiProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MEMultipartFormApiProtocol.h; sourceTree = "<group>"; };
-		DBB5EFBEB85D99191851E7F353EC5B71 /* MEMultipartFormApi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MEMultipartFormApi.h; sourceTree = "<group>"; };
 		DD218A944EC5F8792D2D7329A9360567 /* NSDictionary+MTLJSONKeyPath.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+MTLJSONKeyPath.m"; path = "Mantle/NSDictionary+MTLJSONKeyPath.m"; sourceTree = "<group>"; };
 		DDC6DA37D5A922CADC0603A1CBDE5A9B /* AFImageDownloader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFImageDownloader.m; path = "UIKit+AFNetworking/AFImageDownloader.m"; sourceTree = "<group>"; };
+		DDD93DA9827FD62BBD656C7C17C860FD /* MEMultipartFormApiProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MEMultipartFormApiProtocol.h; sourceTree = "<group>"; };
 		E02C875B5A73CB22FC3204373045001E /* MTLModel+NSCoding.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "MTLModel+NSCoding.m"; path = "Mantle/MTLModel+NSCoding.m"; sourceTree = "<group>"; };
 		E03C00C2EC39C194841F347D20607259 /* MTLReflection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MTLReflection.m; path = Mantle/MTLReflection.m; sourceTree = "<group>"; };
+		E0A8F9DE7CFD32C469281E475A39C136 /* MEMultipartFormApi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MEMultipartFormApi.h; sourceTree = "<group>"; };
 		E163953C7459F48FE34D1F2B8E0B1BBF /* UIRefreshControl+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIRefreshControl+AFNetworking.h"; path = "UIKit+AFNetworking/UIRefreshControl+AFNetworking.h"; sourceTree = "<group>"; };
 		E4B9C1318C44C18984FDFFDD469B6F78 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFSecurityPolicy.h; path = AFNetworking/AFSecurityPolicy.h; sourceTree = "<group>"; };
 		E98600F41B8578388932BA76D5D4F69E /* AFURLSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLSessionManager.m; path = AFNetworking/AFURLSessionManager.m; sourceTree = "<group>"; };
 		E9BA9E9FE67FAE5C771025BB98E3D39A /* EXTScope.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXTScope.h; path = Mantle/extobjc/EXTScope.h; sourceTree = "<group>"; };
 		EA1BFAF52EE9A3AB1A900E19B5E783D2 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkActivityIndicatorManager.m; path = "UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m"; sourceTree = "<group>"; };
 		ECE53AC7104674DBF527D240E8E68A39 /* SSKeychain-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SSKeychain-dummy.m"; sourceTree = "<group>"; };
+		EDD9785D2166500AD4FA23AD2866BE9B /* MEErrorHelperProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MEErrorHelperProtocol.h; sourceTree = "<group>"; };
 		EEAB67158B1F52C9968B613E8F9E6DFD /* UIButton+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+AFNetworking.h"; path = "UIKit+AFNetworking/UIButton+AFNetworking.h"; sourceTree = "<group>"; };
 		EED5A711122B31D8EC389E024214AC21 /* NSArray+MTLManipulationAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MTLManipulationAdditions.m"; path = "Mantle/NSArray+MTLManipulationAdditions.m"; sourceTree = "<group>"; };
 		F2CD307D821163F311E7C0E7504E1D8A /* Mantle-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Mantle-prefix.pch"; sourceTree = "<group>"; };
@@ -329,7 +326,6 @@
 		F77A0E20083116756CAD627080BBB2BD /* AFAutoPurgingImageCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFAutoPurgingImageCache.h; path = "UIKit+AFNetworking/AFAutoPurgingImageCache.h"; sourceTree = "<group>"; };
 		F78399D1FEDA7AADCE079D8BDEA4C18F /* Pods-Mercurio_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Mercurio_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		F8ACEF8A4248831C2FA122A724D67B3B /* AFNetworking.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFNetworking.xcconfig; sourceTree = "<group>"; };
-		FB4709E404787BB91371AC5C44C0A727 /* MESessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MESessionManager.m; sourceTree = "<group>"; };
 		FDAAFBBD663A42FD1031ADA2F2E8BF97 /* MTLModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MTLModel.h; path = Mantle/MTLModel.h; sourceTree = "<group>"; };
 		FEDE6C37A35A79CD7690009B3295D7E5 /* UIActivityIndicatorView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIActivityIndicatorView+AFNetworking.h"; path = "UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.h"; sourceTree = "<group>"; };
 		FF8488419E625D4A555DA7C07B45DF88 /* NSDictionary+MTLMappingAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+MTLMappingAdditions.m"; path = "Mantle/NSDictionary+MTLMappingAdditions.m"; sourceTree = "<group>"; };
@@ -344,11 +340,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		43E9D75652F109264491F807F39CB0CB /* Frameworks */ = {
+		20EF129AF448AEA195CC480F31D8D2F3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FBC5AC0F8C24799F983ACBA0BB981FA /* Foundation.framework in Frameworks */,
+				8F75345E1758BAF4D9B048A730046F09 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,12 +360,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B7ACEB4F0D4A61C6A2C5AFD6A15D24EE /* Frameworks */ = {
+		96251F985DE44A3BE59F90D278E67D1B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DA1A8A64D946E6A86C046EB76983434 /* Foundation.framework in Frameworks */,
-				EA63AB5A15FFDBF6F1AE43B882E6A9BE /* Security.framework in Frameworks */,
+				0E802CCFD978605BDF60FBCC7A0151D1 /* Foundation.framework in Frameworks */,
+				D25AA59372C9086C7413382F93212A48 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,7 +377,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E83812B1126C76E0898945B5F923CB8B /* Frameworks */ = {
+		C2CF4E5F2B3975B0CADC8D07755467D9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -549,6 +545,14 @@
 			name = UIKit;
 			sourceTree = "<group>";
 		};
+		74C0FDE3F5FFF31ACA771D291B4F0BDF /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				8BD5269DB83BD735E66C111455518A8B /* Classes */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
 		76E9CC6657B99E86ABF42E25F0E88DA0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -596,12 +600,27 @@
 			name = Serialization;
 			sourceTree = "<group>";
 		};
-		9B5B1BC99376B55E6BB1049A926F7B0D /* Pod */ = {
+		8BD5269DB83BD735E66C111455518A8B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				D897FC2034545B42BE9EB2AE3DD0ADD7 /* Classes */,
+				7D34EE0057749283DEC7D8261797A9D8 /* MEApi.h */,
+				3E9EBABB94F62E56BE0374FCC1EDFF26 /* MEApi.m */,
+				CFD0A0DCE204582419191EFF745FCA3E /* MECredentialManager.h */,
+				70BB48BAC937FF3FF3B05224FB8C9504 /* MECredentialManager.m */,
+				9C54D66ACD8093BEC180869F06887103 /* MEErrorHelper.h */,
+				7419FBB024D36ECBD7F0ACCC9919B9CD /* MEErrorHelper.m */,
+				EDD9785D2166500AD4FA23AD2866BE9B /* MEErrorHelperProtocol.h */,
+				759F74627566E21C2927CF7D9447273A /* MEKeyChain.h */,
+				446C3514EBE7471ED666DC189DD749CA /* MEKeyChain.m */,
+				D012BC0A66D29FE3AD3F6E1B56DE1A10 /* MEModel.h */,
+				9B3782611C11E6DC65EC1E6B05EB4E33 /* MEModel.m */,
+				E0A8F9DE7CFD32C469281E475A39C136 /* MEMultipartFormApi.h */,
+				C46E0EC84FE9BF5A37262EC15D92011F /* MEMultipartFormApi.m */,
+				DDD93DA9827FD62BBD656C7C17C860FD /* MEMultipartFormApiProtocol.h */,
+				01711C5954B75451E1DADB28A3B7333A /* MESessionManager.h */,
+				23E00D6C6AC8816C3F1A2644B6471FDD /* MESessionManager.m */,
 			);
-			path = Pod;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		9FF96885F0FCB9104CDF43BE3A41EB4A /* Support Files */ = {
@@ -618,7 +637,7 @@
 		A16AB05C83BFD1B1AE598A6145D9FB66 /* Mercurio */ = {
 			isa = PBXGroup;
 			children = (
-				9B5B1BC99376B55E6BB1049A926F7B0D /* Pod */,
+				74C0FDE3F5FFF31ACA771D291B4F0BDF /* Pod */,
 				F59FE4E21AB928C05489917718551B12 /* Support Files */,
 			);
 			name = Mercurio;
@@ -647,31 +666,6 @@
 				64D18050D0888CE44D07C90A8DDF2193 /* AFSecurityPolicy.m */,
 			);
 			name = Security;
-			sourceTree = "<group>";
-		};
-		D897FC2034545B42BE9EB2AE3DD0ADD7 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				3ADAB34710B9BA967C4119DB7686C786 /* MEApi.h */,
-				AC2202599EF892ED2944CA98C66F0B7C /* MEApi.m */,
-				DBB5EFBEB85D99191851E7F353EC5B71 /* MEMultipartFormApi.h */,
-				09E489E16FC8ED76AC85C89C7A629D9E /* MEMultipartFormApi.m */,
-				0001499DDC7C431A7B7AB19908C3C028 /* MEConstants.h */,
-				44F3B524772C00E8F96CC41CF0D38390 /* MEConstants.m */,
-				B1F07EBC5A2011B445A80475413E170F /* MECredentialManager.h */,
-				93A9CDF010968EB4D6014C8B4F8FCF66 /* MECredentialManager.m */,
-				D7827893447A3C2081948E0D4309875F /* MEErrorHelper.h */,
-				084D688DE9DE72C56287E11361C80E16 /* MEErrorHelper.m */,
-				6B522839BECF89A08D96D52F8077D4A0 /* MEErrorHelperProtocol.h */,
-				705FA8616170BD2CD8FFAB37D0150702 /* MEKeyChain.h */,
-				20BED4C10F9007F291F637A92B5893F9 /* MEKeyChain.m */,
-				31DE88D3EEAD72E9FB7CAC53584D986E /* MEModel.h */,
-				409B8D33A851D878D9C98ECD99A619F3 /* MEModel.m */,
-				DB128A7FBB9629DA247B19D1A0F6490A /* MEMultipartFormApiProtocol.h */,
-				96F73F5B6076C36DA9E9D478EE223DAB /* MESessionManager.h */,
-				FB4709E404787BB91371AC5C44C0A727 /* MESessionManager.m */,
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		D8E9875416BBA157AA9D63471FA5A5CE /* Support Files */ = {
@@ -736,29 +730,19 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		5819CC0AE0538F9C18D067AA1DC78305 /* Headers */ = {
+		8725FCDED9EA63B4736C81A5AD41E390 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B7A87A2786BA679C9A196A26EDA3B76 /* SSKeychain.h in Headers */,
-				B75EFBA5A9AE0F116FF9A44706C9623C /* SSKeychainQuery.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7616574ADD7D640F20C4B751076B73BA /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				45B48E8F6C014911D7D5694652B4323F /* MEApi.h in Headers */,
-				4FFB3AE23BB63FFB9334454330002920 /* MEConstants.h in Headers */,
-				3B790BF8B5BE080BC62135335E33DB26 /* MECredentialManager.h in Headers */,
-				6B466F777E08C7B537EAE60D0A9B2DEA /* MEErrorHelper.h in Headers */,
-				1D4B4562FC2035E4A7C9228EDEFD6A25 /* MEErrorHelperProtocol.h in Headers */,
-				59D6C8B782E1763233D94F724CB61BFC /* MEKeyChain.h in Headers */,
-				86D4524BE366ED46510B5303BE96CF75 /* MEModel.h in Headers */,
-				D7B21803582D131E4667790B63FAF189 /* MEMultipartFormApi.h in Headers */,
-				C646F6EA63394A78B2733912DAFEF32C /* MEMultipartFormApiProtocol.h in Headers */,
-				2F8BA87770E070AF01888CA73E672D82 /* MESessionManager.h in Headers */,
+				031C9308DA547EE55CAD1999744A6A19 /* MEApi.h in Headers */,
+				619A4CA860D54A32EF18A3341A74F1F9 /* MECredentialManager.h in Headers */,
+				C55D6D53EB7FB4078E0BCE3A3004D98C /* MEErrorHelper.h in Headers */,
+				A6A10815B0F4B3A1EB7C9776BA806A2F /* MEErrorHelperProtocol.h in Headers */,
+				9E7DBB207B576DC0EE2CDA8B3CBFB487 /* MEKeyChain.h in Headers */,
+				72A7C7EA5AB83DBDE385CBE151324F5F /* MEModel.h in Headers */,
+				31896C02D3377CA2ACD9473495941D05 /* MEMultipartFormApi.h in Headers */,
+				F2CE5EE5DE46A09ACC442488B92A4038 /* MEMultipartFormApiProtocol.h in Headers */,
+				D38256C06A446C17D21C8117EE3E5AA1 /* MESessionManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -813,6 +797,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F0FB363F3C5005013E9BEC055387FC6C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBA447B06D3BC0AF5623AA0D64C96224 /* SSKeychain.h in Headers */,
+				5851884950F811878086227E0D8D1561 /* SSKeychainQuery.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -853,55 +846,21 @@
 			productReference = A0BC86DA4387477C7F65B4AD83E66145 /* libMantle.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		6894D3FFA230C07F8DF9BBD3E6567267 /* Mercurio-Mercurio */ = {
+		4A17483F854753BD25DFE2596DD7B046 /* Mercurio */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 94207E9B4AEDF5540AC93A2F1F07C280 /* Build configuration list for PBXNativeTarget "Mercurio-Mercurio" */;
+			buildConfigurationList = 2F870D5D14F351B310A2A8B6310AA781 /* Build configuration list for PBXNativeTarget "Mercurio" */;
 			buildPhases = (
-				CF0CD639893FF8C3A38A936E3BF2EE07 /* Sources */,
-				E83812B1126C76E0898945B5F923CB8B /* Frameworks */,
-				35A04E68C317B5D8B8D97139442D552C /* Resources */,
+				3B937349C2C79198D1D63EFEFBB053BF /* Sources */,
+				20EF129AF448AEA195CC480F31D8D2F3 /* Frameworks */,
+				8725FCDED9EA63B4736C81A5AD41E390 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-			);
-			name = "Mercurio-Mercurio";
-			productName = "Mercurio-Mercurio";
-			productReference = 1620CA8C1CBBD430422DB1D02CEBA190 /* Mercurio.bundle */;
-			productType = "com.apple.product-type.bundle";
-		};
-		7591A07ECE0BB313295AD0A745283C6B /* SSKeychain */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 46CBA61E9CBD51252C11F3F9640B5E38 /* Build configuration list for PBXNativeTarget "SSKeychain" */;
-			buildPhases = (
-				5464CC1BC2464130D7D536C17BBC732E /* Sources */,
-				B7ACEB4F0D4A61C6A2C5AFD6A15D24EE /* Frameworks */,
-				5819CC0AE0538F9C18D067AA1DC78305 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = SSKeychain;
-			productName = SSKeychain;
-			productReference = 892575AABE9C8A936BAF98F50A5636A0 /* libSSKeychain.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		820D045FF92ED0ABD2BA26603159FA34 /* Mercurio */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 02FAA590D701B802AC9E5D465C2B250C /* Build configuration list for PBXNativeTarget "Mercurio" */;
-			buildPhases = (
-				1FEB3DA76BB009A3DFD95FB0A8A84B62 /* Sources */,
-				43E9D75652F109264491F807F39CB0CB /* Frameworks */,
-				7616574ADD7D640F20C4B751076B73BA /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				84BB0FCBAF56E5A7D878CC4C6F96DCB0 /* PBXTargetDependency */,
-				7FF2F7CBF0F8E05CAA8ED71516738DC4 /* PBXTargetDependency */,
-				4CEE2D019FEC5E0EAFF97881CC73A550 /* PBXTargetDependency */,
-				7495AF2250EA2B2F582506981057D615 /* PBXTargetDependency */,
+				B0FF46674A7A538BC17B9D056B31E67A /* PBXTargetDependency */,
+				B285D395A2C49B16F686EA4950DBA8BD /* PBXTargetDependency */,
+				FEF182CBE37E74030DF5EEFD5DC32B8F /* PBXTargetDependency */,
+				7D6FB5DD8BAE0361289449EB64B26D8D /* PBXTargetDependency */,
 			);
 			name = Mercurio;
 			productName = Mercurio;
@@ -925,6 +884,23 @@
 			productReference = 9A460D29CC8772D7EB7477D00D90A9B1 /* libAFNetworking.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		B487E9AF388ADCEC89E429C7F6DE41DE /* SSKeychain */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 790DDB0CFB08C41F32107745A2FB1C85 /* Build configuration list for PBXNativeTarget "SSKeychain" */;
+			buildPhases = (
+				5212B534C50D08263241A8651F6AC4FA /* Sources */,
+				96251F985DE44A3BE59F90D278E67D1B /* Frameworks */,
+				F0FB363F3C5005013E9BEC055387FC6C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SSKeychain;
+			productName = SSKeychain;
+			productReference = 892575AABE9C8A936BAF98F50A5636A0 /* libSSKeychain.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		D9C5019FC34AAF76C2008AD87B274740 /* Pods-Mercurio_Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E90928025E2303EBF9AA6137E9EFF62B /* Build configuration list for PBXNativeTarget "Pods-Mercurio_Example" */;
@@ -945,6 +921,23 @@
 			productReference = 0E9FC70AADF76539B7EC07BC1A214C43 /* libPods-Mercurio_Example.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		FED92086C29EC07DB9F0D5F080CE7AF6 /* Mercurio-Mercurio */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A72A82B424003BFDF02203A993C46153 /* Build configuration list for PBXNativeTarget "Mercurio-Mercurio" */;
+			buildPhases = (
+				F7B747541A80CA8D182D9AA2B6962624 /* Sources */,
+				C2CF4E5F2B3975B0CADC8D07755467D9 /* Frameworks */,
+				22932371C04378CE540F70D92C09E3E7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Mercurio-Mercurio";
+			productName = "Mercurio-Mercurio";
+			productReference = 1620CA8C1CBBD430422DB1D02CEBA190 /* Mercurio.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -952,7 +945,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -968,17 +961,17 @@
 			targets = (
 				928353533005A4198EBDA5B700D37B64 /* AFNetworking */,
 				426BC4549A625B5E1E4200D5261A98BF /* Mantle */,
-				820D045FF92ED0ABD2BA26603159FA34 /* Mercurio */,
-				6894D3FFA230C07F8DF9BBD3E6567267 /* Mercurio-Mercurio */,
+				4A17483F854753BD25DFE2596DD7B046 /* Mercurio */,
+				FED92086C29EC07DB9F0D5F080CE7AF6 /* Mercurio-Mercurio */,
 				D9C5019FC34AAF76C2008AD87B274740 /* Pods-Mercurio_Example */,
 				2D3E7D186DF853E710B4DA922A276443 /* Pods-Mercurio_Tests */,
-				7591A07ECE0BB313295AD0A745283C6B /* SSKeychain */,
+				B487E9AF388ADCEC89E429C7F6DE41DE /* SSKeychain */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		35A04E68C317B5D8B8D97139442D552C /* Resources */ = {
+		22932371C04378CE540F70D92C09E3E7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -996,19 +989,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1FEB3DA76BB009A3DFD95FB0A8A84B62 /* Sources */ = {
+		3B937349C2C79198D1D63EFEFBB053BF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A26F8DCA637797F8117F6273BEB971A /* MEApi.m in Sources */,
-				BD5D2F2B858840D364CD2D02FF02C4D2 /* MEConstants.m in Sources */,
-				99221FF7C7EEBD782C71851DD0BB06AE /* MECredentialManager.m in Sources */,
-				3389D012F92ED551707B4AF299852E42 /* MEErrorHelper.m in Sources */,
-				628B06686A3AD70FE54AE0999B89E598 /* MEKeyChain.m in Sources */,
-				F2371D70172CFE41F4246B262398B93C /* MEModel.m in Sources */,
-				5152C5234A31B04255550E25C74F1D90 /* MEMultipartFormApi.m in Sources */,
-				02ED71B538BDF4867B00870BAC700363 /* Mercurio-dummy.m in Sources */,
-				BE74E975C85221A660F3701EC26572E9 /* MESessionManager.m in Sources */,
+				43DEF0D3E8D40A3D4E54D98D0F6FEB0E /* MEApi.m in Sources */,
+				08914B90EBCE4D97D4958976E35DAB9E /* MECredentialManager.m in Sources */,
+				424FEE1ACF61F1E0D6D5F99E7E43238B /* MEErrorHelper.m in Sources */,
+				94378EDB98EEFC4E88C4325AF4C6F727 /* MEKeyChain.m in Sources */,
+				544F69F729B6450DBAF04D57940E857F /* MEModel.m in Sources */,
+				3CDF72AED81607416028C72B194BEBEA /* MEMultipartFormApi.m in Sources */,
+				FA43EB9240683966A0AFB651EE82F369 /* Mercurio-dummy.m in Sources */,
+				E36EC250BC81830D6B6DA3E16E2AA501 /* MESessionManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1017,6 +1009,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE0448D49D8D617CAF7870E543B06070 /* Pods-Mercurio_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5212B534C50D08263241A8651F6AC4FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				660A0DD1E1C5AEB5D6891F4328996FF4 /* SSKeychain-dummy.m in Sources */,
+				816662CABFAE93DA870E9AB8EF41E552 /* SSKeychain.m in Sources */,
+				6652A93A3F5FF42C1D4AD33DAF04072D /* SSKeychainQuery.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1044,23 +1046,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5464CC1BC2464130D7D536C17BBC732E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				816FFDE02F938DE8E8D87F0BC69ADAFB /* SSKeychain-dummy.m in Sources */,
-				606C755FBD74C05919C779126BA798E1 /* SSKeychain.m in Sources */,
-				152AE756C87F6321A61C476EEEE02929 /* SSKeychainQuery.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CF0CD639893FF8C3A38A936E3BF2EE07 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		DE0BAD758C6F291CE7E10DA077987C62 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1084,13 +1069,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F7B747541A80CA8D182D9AA2B6962624 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		2520D386465A950719655FD292E9C2B5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SSKeychain;
-			target = 7591A07ECE0BB313295AD0A745283C6B /* SSKeychain */;
+			target = B487E9AF388ADCEC89E429C7F6DE41DE /* SSKeychain */;
 			targetProxy = 6780D8BD7F9CF9F49663780BCF2144D5 /* PBXContainerItemProxy */;
 		};
 		46103395D1D6FFD06977AD2E546821C4 /* PBXTargetDependency */ = {
@@ -1105,35 +1097,17 @@
 			target = 426BC4549A625B5E1E4200D5261A98BF /* Mantle */;
 			targetProxy = 17A9CB5090A819B39CD79672F07E0ED3 /* PBXContainerItemProxy */;
 		};
-		4CEE2D019FEC5E0EAFF97881CC73A550 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Mercurio-Mercurio";
-			target = 6894D3FFA230C07F8DF9BBD3E6567267 /* Mercurio-Mercurio */;
-			targetProxy = 820B143BFEFE59DF232C1F488DDAB074 /* PBXContainerItemProxy */;
-		};
 		541E685B9711DA69594371814E472A3F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SSKeychain;
-			target = 7591A07ECE0BB313295AD0A745283C6B /* SSKeychain */;
+			target = B487E9AF388ADCEC89E429C7F6DE41DE /* SSKeychain */;
 			targetProxy = 85F4C56D0E49E4DF0EC037C2E94D265D /* PBXContainerItemProxy */;
 		};
-		7495AF2250EA2B2F582506981057D615 /* PBXTargetDependency */ = {
+		7D6FB5DD8BAE0361289449EB64B26D8D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SSKeychain;
-			target = 7591A07ECE0BB313295AD0A745283C6B /* SSKeychain */;
-			targetProxy = 6BDD0AF7FA3F105DA7E44FAC05D7E3C5 /* PBXContainerItemProxy */;
-		};
-		7FF2F7CBF0F8E05CAA8ED71516738DC4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Mantle;
-			target = 426BC4549A625B5E1E4200D5261A98BF /* Mantle */;
-			targetProxy = C4DFB635F30824C857E9889B86BEF124 /* PBXContainerItemProxy */;
-		};
-		84BB0FCBAF56E5A7D878CC4C6F96DCB0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = AFNetworking;
-			target = 928353533005A4198EBDA5B700D37B64 /* AFNetworking */;
-			targetProxy = 2E5D11345F94BD6FE020164F39C8BE29 /* PBXContainerItemProxy */;
+			target = B487E9AF388ADCEC89E429C7F6DE41DE /* SSKeychain */;
+			targetProxy = 1181516083E05EB4D975F0E925D27675 /* PBXContainerItemProxy */;
 		};
 		979469EC962B2BF1AC7DE1486EEE07EB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1144,13 +1118,25 @@
 		AF9103814DE5ABE4A3941F6B9D0D54CB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Mercurio;
-			target = 820D045FF92ED0ABD2BA26603159FA34 /* Mercurio */;
+			target = 4A17483F854753BD25DFE2596DD7B046 /* Mercurio */;
 			targetProxy = C9A6AEF9BF6DD22823CDDB37C27608AD /* PBXContainerItemProxy */;
+		};
+		B0FF46674A7A538BC17B9D056B31E67A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AFNetworking;
+			target = 928353533005A4198EBDA5B700D37B64 /* AFNetworking */;
+			targetProxy = 3D0534D31F852AD2CBA7B7137672B790 /* PBXContainerItemProxy */;
+		};
+		B285D395A2C49B16F686EA4950DBA8BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Mantle;
+			target = 426BC4549A625B5E1E4200D5261A98BF /* Mantle */;
+			targetProxy = AEA55FEB013E4787AD642EE413E2D751 /* PBXContainerItemProxy */;
 		};
 		CE265D9EA9741056AC12A216CECD5484 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Mercurio;
-			target = 820D045FF92ED0ABD2BA26603159FA34 /* Mercurio */;
+			target = 4A17483F854753BD25DFE2596DD7B046 /* Mercurio */;
 			targetProxy = F50FCF3CE8DE721640DFAB3A96CC7A90 /* PBXContainerItemProxy */;
 		};
 		D886FA836FA4365C394D3BABC3C4734F /* PBXTargetDependency */ = {
@@ -1159,27 +1145,15 @@
 			target = 928353533005A4198EBDA5B700D37B64 /* AFNetworking */;
 			targetProxy = A4AD0640F6C9278CEAF6FB09C0A344B6 /* PBXContainerItemProxy */;
 		};
+		FEF182CBE37E74030DF5EEFD5DC32B8F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Mercurio-Mercurio";
+			target = FED92086C29EC07DB9F0D5F080CE7AF6 /* Mercurio-Mercurio */;
+			targetProxy = 72115A37FC69691D15E37EC43FCAAD8A /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		051C1E78D29ACBD6CC07BB47AD92736A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B3A173647ED886A98829F75F1F01D377 /* Mercurio.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Mercurio/Mercurio-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
 		052A17875CB827423D627183396CEB60 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1231,24 +1205,6 @@
 			};
 			name = Debug;
 		};
-		13AC166212B45CF4DBACFBF8BDA12AB2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B3A173647ED886A98829F75F1F01D377 /* Mercurio.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Mercurio/Mercurio-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
 		17224E02F0E8CE2AC8EF6DDD7B535094 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F8ACEF8A4248831C2FA122A724D67B3B /* AFNetworking.xcconfig */;
@@ -1285,7 +1241,7 @@
 			};
 			name = Debug;
 		};
-		2092C5CBBC63666B356788B14F3A2759 /* Release */ = {
+		1DC3D7E27EDC3F461BE038CB88EA655C /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B3A173647ED886A98829F75F1F01D377 /* Mercurio.xcconfig */;
 			buildSettings = {
@@ -1315,6 +1271,24 @@
 			};
 			name = Release;
 		};
+		2795076E912ECB02CB09E25A93AA0858 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DBC3E285CEFF62D70ADAE9DE427CCC5 /* SSKeychain.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SSKeychain/SSKeychain-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		2D8B23E4F4E6215584DA2A4E82EA818C /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F78399D1FEDA7AADCE079D8BDEA4C18F /* Pods-Mercurio_Tests.release.xcconfig */;
@@ -1332,26 +1306,14 @@
 			};
 			name = Release;
 		};
-		38510BF671B52C4FE0288F73A3A234A8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B3A173647ED886A98829F75F1F01D377 /* Mercurio.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = Mercurio;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		648A6E8903C1112DE42BF2DA64815F5B /* Release */ = {
+		6C7C28FCF09D28A5DF3DCC35D60A0DFC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4DBC3E285CEFF62D70ADAE9DE427CCC5 /* SSKeychain.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/SSKeychain/SSKeychain-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -1360,7 +1322,25 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
-			name = Release;
+			name = Debug;
+		};
+		940D47FA25DFF04E9071641265849250 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3A173647ED886A98829F75F1F01D377 /* Mercurio.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Mercurio/Mercurio-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
 		};
 		B37F0F91F85060E28F1DAAB522DC7EC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1380,7 +1360,6 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -1402,21 +1381,15 @@
 			};
 			name = Debug;
 		};
-		CD6ACA2F042A64664ADB235D89A7326D /* Debug */ = {
+		B71A76E93EA07506888F50DC1CFF8E97 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4DBC3E285CEFF62D70ADAE9DE427CCC5 /* SSKeychain.xcconfig */;
+			baseConfigurationReference = B3A173647ED886A98829F75F1F01D377 /* Mercurio.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SSKeychain/SSKeychain-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = Mercurio;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
 		};
@@ -1472,18 +1445,27 @@
 			};
 			name = Release;
 		};
+		FE0E50BB87BF7E8653952BE3327A3179 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3A173647ED886A98829F75F1F01D377 /* Mercurio.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Mercurio/Mercurio-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		02FAA590D701B802AC9E5D465C2B250C /* Build configuration list for PBXNativeTarget "Mercurio" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				051C1E78D29ACBD6CC07BB47AD92736A /* Debug */,
-				13AC166212B45CF4DBACFBF8BDA12AB2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		0705E2EB1ED884E2B646D5F2180F282B /* Build configuration list for PBXNativeTarget "Mantle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1502,11 +1484,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		46CBA61E9CBD51252C11F3F9640B5E38 /* Build configuration list for PBXNativeTarget "SSKeychain" */ = {
+		2F870D5D14F351B310A2A8B6310AA781 /* Build configuration list for PBXNativeTarget "Mercurio" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CD6ACA2F042A64664ADB235D89A7326D /* Debug */,
-				648A6E8903C1112DE42BF2DA64815F5B /* Release */,
+				940D47FA25DFF04E9071641265849250 /* Debug */,
+				FE0E50BB87BF7E8653952BE3327A3179 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1520,11 +1502,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		94207E9B4AEDF5540AC93A2F1F07C280 /* Build configuration list for PBXNativeTarget "Mercurio-Mercurio" */ = {
+		790DDB0CFB08C41F32107745A2FB1C85 /* Build configuration list for PBXNativeTarget "SSKeychain" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				38510BF671B52C4FE0288F73A3A234A8 /* Debug */,
-				2092C5CBBC63666B356788B14F3A2759 /* Release */,
+				6C7C28FCF09D28A5DF3DCC35D60A0DFC /* Debug */,
+				2795076E912ECB02CB09E25A93AA0858 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A72A82B424003BFDF02203A993C46153 /* Build configuration list for PBXNativeTarget "Mercurio-Mercurio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B71A76E93EA07506888F50DC1CFF8E97 /* Debug */,
+				1DC3D7E27EDC3F461BE038CB88EA655C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
