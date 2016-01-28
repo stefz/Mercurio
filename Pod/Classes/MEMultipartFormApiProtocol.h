@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AFURLRequestSerialization.h"
+#import <AFNetworking/AFURLRequestSerialization.h>
 
 typedef void (^MEMultipartFormConstructingBodyBlock)(id <AFMultipartFormData> formData);
 

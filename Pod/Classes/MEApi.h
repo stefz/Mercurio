@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <AFURLRequestSerialization.h>
-#import <AFURLResponseSerialization.h>
+#import <AFNetworking/AFURLRequestSerialization.h>
+#import <AFNetworking/AFURLResponseSerialization.h>
 
 FOUNDATION_EXPORT NSString * const kMETokenHeaderKey;
 FOUNDATION_EXPORT NSTimeInterval const kMEDefaultAPITimeout;
