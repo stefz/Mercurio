@@ -10,8 +10,8 @@
 #import <AFNetworking/AFURLRequestSerialization.h>
 #import <AFNetworking/AFURLResponseSerialization.h>
 
-FOUNDATION_EXPORT NSString * const kMETokenHeaderKey;
-FOUNDATION_EXPORT NSTimeInterval const kMEDefaultAPITimeout;
+FOUNDATION_EXPORT NSString * const METokenHeaderKey;
+FOUNDATION_EXPORT NSTimeInterval const MEDefaultAPITimeout;
 
 @class AFHTTPRequestSerializer;
 

@@ -9,8 +9,8 @@
 #import "MEApi.h"
 #import "MECredentialManager.h"
 
-NSString * const kMETokenHeaderKey = @"token";
-NSTimeInterval const kMEDefaultAPITimeout = 5;
+NSString * const METokenHeaderKey = @"token";
+NSTimeInterval const MEDefaultAPITimeout = 5;
 
 @interface MEApi()
 
@@ -41,12 +41,12 @@ NSTimeInterval const kMEDefaultAPITimeout = 5;
 }
 
 - (NSString *)tokenHeaderName {
-    return _tokenHeaderName ?: kMETokenHeaderKey;
+    return _tokenHeaderName ?: METokenHeaderKey;
 }
 
 - (AFHTTPRequestSerializer <AFURLRequestSerialization> *)requestSerializer {
     AFJSONRequestSerializer *serializer = [AFJSONRequestSerializer serializer];
-    serializer.timeoutInterval = _timeout ?: kMEDefaultAPITimeout;
+    serializer.timeoutInterval = _timeout ?: MEDefaultAPITimeout;
     
     [self defaultConfigurationWithRequestSerializer:serializer];
     
@@ -66,7 +66,7 @@ NSTimeInterval const kMEDefaultAPITimeout = 5;
         [serializer setAuthorizationHeaderFieldWithUsername:[[MECredentialManager sharedInstance] username]
                                                    password:[[MECredentialManager sharedInstance] password]];
     } else if (_authentication == MEApiAuthenticationToken) {
-        [serializer setValue:[[MECredentialManager sharedInstance] token] forHTTPHeaderField:kMETokenHeaderKey];
+        [serializer setValue:[[MECredentialManager sharedInstance] token] forHTTPHeaderField:METokenHeaderKey];
     }
 }
 
@@ -77,7 +77,7 @@ NSTimeInterval const kMEDefaultAPITimeout = 5;
     api.path = path;
     api.jsonRoot = jsonRoot;
     api.responseObjectClass = responseClass;
-    api.timeout = kMEDefaultAPITimeout;
+    api.timeout = MEDefaultAPITimeout;
     
     return api;
 }

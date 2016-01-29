@@ -20,7 +20,7 @@
 - (AFHTTPRequestSerializer <AFURLRequestSerialization> *)requestSerializer {
     
     AFHTTPRequestSerializer *serializer = [AFHTTPRequestSerializer serializer];
-    serializer.timeoutInterval = self.timeout ?: kMEDefaultAPITimeout;
+    serializer.timeoutInterval = self.timeout ?: MEDefaultAPITimeout;
     
     [self defaultConfigurationWithRequestSerializer:serializer];
     
