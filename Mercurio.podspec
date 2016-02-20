@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "Mercurio"
-  s.version          = "0.1.3"
+  s.version          = "0.1.4"
   s.summary          = "Mercurio is a fast way to make an api with AFNetworking and parse the response with Mantle."
   s.homepage         = "https://github.com/stefz/Mercurio"
   s.license          = 'MIT'

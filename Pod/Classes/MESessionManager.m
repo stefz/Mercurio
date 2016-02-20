@@ -88,10 +88,6 @@
                                                              error:error];
     }
     
-    for (NSString *key in [api.headers allKeys]) {
-        [mutableRequest addValue:api.headers[key] forHTTPHeaderField:key];
-    }
-    
     return mutableRequest;
 }
 
