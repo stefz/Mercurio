@@ -7,7 +7,7 @@
 //
 
 #import "MEKeyChain.h"
-#import "SSKeychain.h"
+#import <SSKeychain/SSKeychain.h>
 
 @interface MEKeyChain ()
 

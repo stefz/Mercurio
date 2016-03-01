@@ -7,11 +7,10 @@
 //
 
 #import "MEApi.h"
-#import "AFURLRequestSerialization.h"
 #import "MECredentialManager.h"
 
-NSString * const kMETokenHeaderKey = @"token";
-NSTimeInterval const kMEDefaultAPITimeout = 5;
+NSString * const METokenHeaderKey = @"token";
+NSTimeInterval const MEDefaultAPITimeout = 5;
 
 @interface MEApi()
 
@@ -42,13 +41,23 @@ NSTimeInterval const kMEDefaultAPITimeout = 5;
 }
 
 - (NSString *)tokenHeaderName {
-    return _tokenHeaderName ?: kMETokenHeaderKey;
+    return _tokenHeaderName ?: METokenHeaderKey;
 }
 
-- (AFHTTPRequestSerializer *)serializer {
+- (AFHTTPRequestSerializer <AFURLRequestSerialization> *)requestSerializer {
     AFJSONRequestSerializer *serializer = [AFJSONRequestSerializer serializer];
-    serializer.timeoutInterval = _timeout ?: kMEDefaultAPITimeout;
+    serializer.timeoutInterval = _timeout ?: MEDefaultAPITimeout;
     
+    [self defaultConfigurationWithRequestSerializer:serializer];
+    
+    return serializer;
+}
+
+- (AFHTTPResponseSerializer <AFURLResponseSerialization> *)responseSerializer {
+    return [AFJSONResponseSerializer serializer];
+}
+
+- (void)defaultConfigurationWithRequestSerializer:(AFHTTPRequestSerializer <AFURLRequestSerialization> *)serializer {
     [_headers enumerateKeysAndObjectsUsingBlock:^(id field, id value, BOOL * __unused stop) {
         [serializer setValue:value forHTTPHeaderField:field];
     }];
@@ -57,10 +66,8 @@ NSTimeInterval const kMEDefaultAPITimeout = 5;
         [serializer setAuthorizationHeaderFieldWithUsername:[[MECredentialManager sharedInstance] username]
                                                    password:[[MECredentialManager sharedInstance] password]];
     } else if (_authentication == MEApiAuthenticationToken) {
-        [serializer setValue:[[MECredentialManager sharedInstance] token] forHTTPHeaderField:kMETokenHeaderKey];
+        [serializer setValue:[[MECredentialManager sharedInstance] token] forHTTPHeaderField:METokenHeaderKey];
     }
-    
-    return serializer;
 }
 
 + (instancetype)apiWithMethod:(MEApiMethod)method path:(NSString *)path responseClass:(Class)responseClass jsonRoot:(NSString *)jsonRoot {
@@ -70,7 +77,7 @@ NSTimeInterval const kMEDefaultAPITimeout = 5;
     api.path = path;
     api.jsonRoot = jsonRoot;
     api.responseObjectClass = responseClass;
-    api.timeout = kMEDefaultAPITimeout;
+    api.timeout = MEDefaultAPITimeout;
     
     return api;
 }

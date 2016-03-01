@@ -7,9 +7,9 @@
 //
 
 #import "MESessionManager.h"
-#import "MEApi.h"
 #import "MEModel.h"
 #import "MEErrorHelper.h"
+#import "MEMultipartFormApiProtocol.h"
 
 @implementation MESessionManager
 
@@ -31,10 +31,11 @@
     }
 }
 
-#pragma mark - Regular request
-- (NSURLSessionDataTask *)sessionDataTaskWithApi:(MEApi *)api completion:(void(^)(id responseObject, NSURLSessionDataTask *task, NSError *error))completion {
-
-    self.requestSerializer = [api serializer];
+- (NSURLSessionDataTask *)sessionDataTaskWithApi:(MEApi *)api
+                                      completion:(void(^)(id responseObject, NSURLSessionDataTask *task, NSError *error))completion {
+    
+    self.requestSerializer = [api requestSerializer];
+    self.responseSerializer = [api responseSerializer];
     
     NSURLSessionDataTask *task = [self dataTaskWithApi:api success:^(NSURLSessionDataTask *task, id responseObject) {
         completion(responseObject, task, nil);
@@ -43,10 +44,15 @@
         completion(nil, task, error);
         
     }];
-                                    
+    
     [task resume];
     
     return task;
+}
+
+- (NSURLSessionDataTask *)sessionMultipartDataTaskWithApi:(MEApi <MEMultipartFormApiProtocol> *)api
+                                               completion:(void(^)(id responseObject, NSURLSessionDataTask *task, NSError *error))completion {
+    return [self sessionDataTaskWithApi:api completion:completion];
 }
 
 - (NSString *)stringMethodWithRequestMethod:(MEApiMethod)requestMethod {
@@ -66,34 +72,49 @@
 
 - (NSMutableURLRequest *)requestWithApi:(MEApi *)api error:(NSError *__autoreleasing *)error {
     NSString *urlString = [[NSURL URLWithString:api.path relativeToURL:self.baseURL] absoluteString];
-    NSMutableURLRequest *mutableRequest = [self.requestSerializer requestWithMethod:[self stringMethodWithRequestMethod:api.method] URLString:urlString parameters:api.params error:error];
     
-    for (NSString *key in [api.headers allKeys]) {
-        [mutableRequest addValue:api.headers[key] forHTTPHeaderField:key];
+    NSMutableURLRequest *mutableRequest;
+    
+    if ([api conformsToProtocol:@protocol(MEMultipartFormApiProtocol)]) {
+        mutableRequest = [self.requestSerializer multipartFormRequestWithMethod:[self stringMethodWithRequestMethod:api.method]
+                                                                      URLString:urlString
+                                                                     parameters:api.params
+                                                      constructingBodyWithBlock:((MEApi<MEMultipartFormApiProtocol> *)api).constructingBodyBlock
+                                                                          error:error];
+    } else {
+        mutableRequest = [self.requestSerializer requestWithMethod:[self stringMethodWithRequestMethod:api.method]
+                                                         URLString:urlString
+                                                        parameters:api.params
+                                                             error:error];
     }
     
     return mutableRequest;
 }
 
-- (NSURLSessionDataTask *)dataTaskWithApi:(MEApi *)api success:(void (^)(NSURLSessionDataTask *task, id responseObject))success failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure
+- (NSURLSessionDataTask *)dataTaskWithApi:(MEApi *)api
+                                  success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
+                                  failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure
 {
     NSError *serializationError = nil;
+    
     NSMutableURLRequest *mutableRequest = [self requestWithApi:api error:&serializationError];
+    
     if (serializationError) {
-        if (failure) {
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wgnu"
-            dispatch_async(self.completionQueue ?: dispatch_get_main_queue(), ^{
-                failure(nil, [self.errorHelper generateMainErrorWithType:MEMainErrorGenericNetwork internalErrorType:MEInternalErrorTypeParsingResponse]);
-            });
-#pragma clang diagnostic pop
-        }
-        
-        return nil;
+        return [self serializationErrorWithFailure:failure];
     }
     
+    return [self dataTaskWithApi:api
+                         request:mutableRequest
+                         success:success
+                         failure:failure];
+}
+
+- (NSURLSessionDataTask *)dataTaskWithApi:(MEApi *)api
+                                  request:(NSMutableURLRequest *)request
+                                  success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
+                                  failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure {
     __block NSURLSessionDataTask *dataTask = nil;
-    dataTask = [self dataTaskWithRequest:mutableRequest completionHandler:^(NSURLResponse * __unused response, id responseObject, NSError *error) {
+    dataTask = [self dataTaskWithRequest:request completionHandler:^(NSURLResponse * __unused response, id responseObject, NSError *error) {
         if (error) {
             if (failure) {
                 NSHTTPURLResponse *taskResponse = (NSHTTPURLResponse *)(dataTask.response);
@@ -104,19 +125,23 @@
         } else {
             if (success && api.responseObjectClass != [NSNull class]) {
                 
-                [api.responseObjectClass objectWithJsonObject:responseObject jsonRoot:api.jsonRoot completion:^(id<MTLJSONSerializing> object, NSError *error) {
-                    if (error) {
-                        failure(dataTask, [self.errorHelper generateMainErrorWithType:MEMainErrorGenericNetwork internalErrorType:MEInternalErrorTypeParsingResponse]);
-                    } else {
-                        if (!object) {
-                            failure(dataTask, [self.errorHelper generateMainErrorWithType:MEMainErrorGenericNetwork internalErrorType:MEInternalErrorTypeParsingResponse]);
-                        } else {
-                            success(dataTask, object);
-                        }
-                    }
-                }];
+                [api.responseObjectClass objectWithJsonObject:responseObject
+                                                     jsonRoot:api.jsonRoot
+                                                   completion:^(id<MTLJSONSerializing> object, NSError *error) {
+                                                       if (error) {
+                                                           failure(dataTask, [self.errorHelper generateMainErrorWithType:MEMainErrorGenericNetwork
+                                                                                                       internalErrorType:MEInternalErrorTypeParsingResponse]);
+                                                       } else {
+                                                           if (!object) {
+                                                               failure(dataTask, [self.errorHelper generateMainErrorWithType:MEMainErrorGenericNetwork
+                                                                                                           internalErrorType:MEInternalErrorTypeParsingResponse]);
+                                                           } else {
+                                                               success(dataTask, object);
+                                                           }
+                                                       }
+                                                   }];
             } else {
-                success(dataTask, nil);
+                success(dataTask, responseObject);
             }
         }
     }];
@@ -124,97 +149,18 @@
     return dataTask;
 }
 
-#pragma mark - Multipart request
-
-- (NSURLSessionDataTask *)sessionMultipartDataTaskWithApi:(MEApi *)api files:(NSArray *)files completion:(void (^)(id, NSURLSessionDataTask *, NSError *))completion {
-    
-    self.requestSerializer = [api serializer];
-    
-    NSURLSessionDataTask *task = [self multipartDataTaskWithApi:api files:(NSArray *)files success:^(NSURLSessionDataTask *task, id responseObject) {
-        completion(responseObject, task, nil);
-    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        
-        completion(nil, task, error);
-        
-    }];
-    
-    [task resume];
-    
-    return task;
-}
-
-- (NSMutableURLRequest *)multipartRequestWithApi:(MEApi *)api files:(NSArray *)files error:(NSError *__autoreleasing *)error {
-    NSString *urlString = [[NSURL URLWithString:api.path relativeToURL:self.baseURL] absoluteString];
-    
-    id block = ^(id<AFMultipartFormData> formData) {
-        
-        int i = 0;
-        for (NSData *data in files) {
-            [formData appendPartWithFileData:data name:[NSString stringWithFormat:@"name_%i", i] fileName:[NSString stringWithFormat:@"file_%i", i] mimeType:@"application/octet-stream"];
-            i++;
-        }
-    };
-    
-    NSMutableURLRequest *mutableRequest = [self.requestSerializer multipartFormRequestWithMethod:[self stringMethodWithRequestMethod:api.method]
-                                                                                       URLString:urlString
-                                                                                      parameters:api.params
-                                                                       constructingBodyWithBlock:block
-                                                                                           error:error];
-    
-    for (NSString *key in [api.headers allKeys]) {
-        [mutableRequest addValue:api.headers[key] forHTTPHeaderField:key];
-    }
-    
-    return mutableRequest;
-}
-
-- (NSURLSessionDataTask *)multipartDataTaskWithApi:(MEApi *)api files:(NSArray *)files success:(void (^)(NSURLSessionDataTask *task, id responseObject))success failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure
-{
-    NSError *serializationError = nil;
-    NSMutableURLRequest *mutableRequest = [self multipartRequestWithApi:api files:(NSArray *)files error:&serializationError];
-    if (serializationError) {
-        if (failure) {
+- (NSURLSessionDataTask *)serializationErrorWithFailure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure {
+    if (failure) {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wgnu"
-            dispatch_async(self.completionQueue ?: dispatch_get_main_queue(), ^{
-                failure(nil, [self.errorHelper generateMainErrorWithType:MEMainErrorGenericNetwork internalErrorType:MEInternalErrorTypeParsingResponse]);
-            });
+        dispatch_async(self.completionQueue ?: dispatch_get_main_queue(), ^{
+            failure(nil, [self.errorHelper generateMainErrorWithType:MEMainErrorGenericNetwork
+                                                   internalErrorType:MEInternalErrorTypeParsingResponse]);
+        });
 #pragma clang diagnostic pop
-        }
-        
-        return nil;
     }
     
-    __block NSURLSessionDataTask *dataTask = nil;
-    dataTask = [self dataTaskWithRequest:mutableRequest completionHandler:^(NSURLResponse * __unused response, id responseObject, NSError *error) {
-        if (error) {
-            if (failure) {
-                NSHTTPURLResponse *taskResponse = (NSHTTPURLResponse *)(dataTask.response);
-                failure(dataTask, [self.errorHelper generateMainError:error response:taskResponse responseObject:responseObject]);
-            }
-        } else if (!responseObject) {
-            success(dataTask, nil);
-        } else {
-            if (success && api.responseObjectClass != [NSNull class]) {
-                
-                [api.responseObjectClass objectWithJsonObject:responseObject jsonRoot:api.jsonRoot completion:^(id<MTLJSONSerializing> object, NSError *error) {
-                    if (error) {
-                        failure(dataTask, [self.errorHelper generateMainErrorWithType:MEMainErrorGenericNetwork internalErrorType:MEInternalErrorTypeParsingResponse]);
-                    } else {
-                        if (!object) {
-                            failure(dataTask, [self.errorHelper generateMainErrorWithType:MEMainErrorGenericNetwork internalErrorType:MEInternalErrorTypeParsingResponse]);
-                        } else {
-                            success(dataTask, object);
-                        }
-                    }
-                }];
-            } else {
-                success(dataTask, nil);
-            }
-        }
-    }];
-    
-    return dataTask;
+    return nil;
 }
 
 @end

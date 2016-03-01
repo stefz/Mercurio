@@ -6,7 +6,6 @@
 //  Copyright (c) 2015 Stefano Zanetti. All rights reserved.
 //
 
-@import UIKit;
 #import "MEAppDelegate.h"
 
 int main(int argc, char * argv[])
