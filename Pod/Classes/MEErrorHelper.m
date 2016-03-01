@@ -100,7 +100,8 @@ NSString * const MEInternalErrorNameKey = @"InternalErrorName";
         }
     } else if ([error.domain isEqualToString:AFURLRequestSerializationErrorDomain] ||
                [error.domain isEqualToString:AFURLResponseSerializationErrorDomain] ||
-               [error.domain isEqualToString:NSCocoaErrorDomain]) {
+               [error.domain isEqualToString:NSCocoaErrorDomain] ||
+               [error.domain isEqualToString:MEErrorDomain]) {
         switch (response.statusCode) {
             case 400 :
                 return MEInternalErrorTypeBadRequest;
