@@ -11,6 +11,7 @@
 #import <MEMultipartFormApi.h>
 #import <MESessionManager.h>
 #import "MEResponse.h"
+#import <NSError+Mercurio.h>
 
 @interface MEViewController ()
 
@@ -47,7 +48,7 @@
     [[MESessionManager sharedInstance] setResponseSerializer:responseSerializer];
     
     MEApi *api = [MEApi apiWithMethod:MEApiMethodGET
-                                 path:@"https://httpbin.org/get"
+                                 path:@"https://httpbin.org/getff"
                         responseClass:[MEResponse class]
                              jsonRoot:@"headers"];
     
@@ -55,6 +56,12 @@
     [[MESessionManager sharedInstance] sessionDataTaskWithApi:api
                                                    completion:^(id responseObject, NSURLSessionDataTask *task, NSError *error) {
                                                        NSLog(@"%@", responseObject);
+                                                       
+                                                       if (error) {
+                                                           NSLog(@"Status code: %zd", [error me_response].statusCode);
+                                                           NSLog(@"Status code: %@", [NSString stringWithUTF8String:[error me_responseData].bytes]);
+                                                       }
+                                                       
                                                        _logTextView.text = error ? [error localizedDescription] : [responseObject description];
                                                    }];
 }

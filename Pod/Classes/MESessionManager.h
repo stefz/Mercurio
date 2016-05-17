@@ -8,14 +8,11 @@
 
 #import <AFNetworking/AFNetworking.h>
 #import "MEApi.h"
-#import "MEErrorHelperProtocol.h"
 #import "MEMultipartFormApiProtocol.h"
 
 @interface MESessionManager : AFHTTPSessionManager
 
 + (instancetype)sharedInstance;
-
-@property (strong, nonatomic) id<MEErrorHelperProtocol> errorHelper;
 
 - (void)setup;
 

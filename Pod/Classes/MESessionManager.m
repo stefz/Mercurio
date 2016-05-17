@@ -8,7 +8,6 @@
 
 #import "MESessionManager.h"
 #import "MEModel.h"
-#import "MEErrorHelper.h"
 #import "MEMultipartFormApiProtocol.h"
 
 @implementation MESessionManager
@@ -26,9 +25,7 @@
 }
 
 - (void)setup {
-    if (!_errorHelper) {
-        self.errorHelper = [[MEErrorHelper alloc] init];
-    }
+
 }
 
 - (NSURLSessionDataTask *)sessionDataTaskWithApi:(MEApi *)api
@@ -93,14 +90,21 @@
 
 - (NSURLSessionDataTask *)dataTaskWithApi:(MEApi *)api
                                   success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
-                                  failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure
-{
+                                  failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure {
     NSError *serializationError = nil;
     
     NSMutableURLRequest *mutableRequest = [self requestWithApi:api error:&serializationError];
     
     if (serializationError) {
-        return [self serializationErrorWithFailure:failure];
+        if (failure) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wgnu"
+            dispatch_async(self.completionQueue ?: dispatch_get_main_queue(), ^{
+                failure(nil, serializationError);
+            });
+#pragma clang diagnostic pop
+        }
+        return nil;
     }
     
     return [self dataTaskWithApi:api
@@ -117,8 +121,7 @@
     dataTask = [self dataTaskWithRequest:request completionHandler:^(NSURLResponse * __unused response, id responseObject, NSError *error) {
         if (error) {
             if (failure) {
-                NSHTTPURLResponse *taskResponse = (NSHTTPURLResponse *)(dataTask.response);
-                failure(dataTask, [self.errorHelper generateMainError:error response:taskResponse responseObject:responseObject]);
+                failure(dataTask, error);
             }
         } else if (!responseObject) {
             success(dataTask, nil);
@@ -129,12 +132,10 @@
                                                      jsonRoot:api.jsonRoot
                                                    completion:^(id<MTLJSONSerializing> object, NSError *error) {
                                                        if (error) {
-                                                           failure(dataTask, [self.errorHelper generateMainErrorWithType:MEMainErrorGenericNetwork
-                                                                                                       internalErrorType:MEInternalErrorTypeParsingResponse]);
+                                                           failure(dataTask, error);
                                                        } else {
                                                            if (!object) {
-                                                               failure(dataTask, [self.errorHelper generateMainErrorWithType:MEMainErrorGenericNetwork
-                                                                                                           internalErrorType:MEInternalErrorTypeParsingResponse]);
+                                                               failure(dataTask, error);
                                                            } else {
                                                                success(dataTask, object);
                                                            }
@@ -147,20 +148,6 @@
     }];
     
     return dataTask;
-}
-
-- (NSURLSessionDataTask *)serializationErrorWithFailure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure {
-    if (failure) {
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wgnu"
-        dispatch_async(self.completionQueue ?: dispatch_get_main_queue(), ^{
-            failure(nil, [self.errorHelper generateMainErrorWithType:MEMainErrorGenericNetwork
-                                                   internalErrorType:MEInternalErrorTypeParsingResponse]);
-        });
-#pragma clang diagnostic pop
-    }
-    
-    return nil;
 }
 
 @end
