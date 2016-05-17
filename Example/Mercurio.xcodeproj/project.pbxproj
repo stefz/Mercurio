@@ -22,9 +22,9 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		60F6D84E1BE0251A001E21C5 /* MEResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F6D84D1BE0251A001E21C5 /* MEResponse.m */; };
 		60F6D8501BE02AAF001E21C5 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60F6D84F1BE02AAF001E21C5 /* Launch Screen.storyboard */; };
-		64DCC8C3746A7C5DEAFA5859 /* libPods-Mercurio_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C863B038AE1E75401AEB41E1 /* libPods-Mercurio_Tests.a */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		ED672B604D47726482BB5E4B /* libPods-Mercurio_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9B7E011A27B7836229702D /* libPods-Mercurio_Example.a */; };
+		CA29A869F95C1EFB7D83D17D /* libPods-Mercurio_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1988329D73285547E7FF0FB /* libPods-Mercurio_Example.a */; };
+		DEF11CDE026BF4CE06E01009 /* libPods-Mercurio_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F451AC96830E4220AC01695E /* libPods-Mercurio_Tests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +39,7 @@
 
 /* Begin PBXFileReference section */
 		2203CF43F95450D9743D4D90 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		4B9B7E011A27B7836229702D /* libPods-Mercurio_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Mercurio_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		551DF75EDBBB8D768CF281A1 /* Pods-Mercurio_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mercurio_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mercurio_Example/Pods-Mercurio_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		460522BAEA893B6ECA37082E /* Pods-Mercurio_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mercurio_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mercurio_Tests/Pods-Mercurio_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		56D565F824096DC64EECD1AB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* Mercurio_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mercurio_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -65,12 +64,12 @@
 		60F6D84D1BE0251A001E21C5 /* MEResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEResponse.m; sourceTree = "<group>"; };
 		60F6D84F1BE02AAF001E21C5 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		63263CCBC2A19719EEC44389 /* Mercurio.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Mercurio.podspec; path = ../Mercurio.podspec; sourceTree = "<group>"; };
-		684B58B81DEFA40F02B4068C /* Pods-Mercurio_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mercurio_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mercurio_Example/Pods-Mercurio_Example.release.xcconfig"; sourceTree = "<group>"; };
-		7F8218E9045F1EB412F5B96A /* Pods-Mercurio_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mercurio_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mercurio_Tests/Pods-Mercurio_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		6B8377351EFF615DAE059D41 /* Pods-Mercurio_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mercurio_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mercurio_Example/Pods-Mercurio_Example.release.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		98BE7D2F65CB09F5BB79EBE8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD9F60EDF6E598867639FBD0 /* Pods-Mercurio_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mercurio_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mercurio_Tests/Pods-Mercurio_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		C863B038AE1E75401AEB41E1 /* libPods-Mercurio_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Mercurio_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6FAA948BD31EBE3652769D3 /* Pods-Mercurio_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mercurio_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mercurio_Tests/Pods-Mercurio_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		DB0B6B8BEE0204C446C7B8E9 /* Pods-Mercurio_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mercurio_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mercurio_Example/Pods-Mercurio_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		F1988329D73285547E7FF0FB /* libPods-Mercurio_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Mercurio_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F451AC96830E4220AC01695E /* libPods-Mercurio_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Mercurio_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +80,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				ED672B604D47726482BB5E4B /* libPods-Mercurio_Example.a in Frameworks */,
+				CA29A869F95C1EFB7D83D17D /* libPods-Mercurio_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,7 +91,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				64DCC8C3746A7C5DEAFA5859 /* libPods-Mercurio_Tests.a in Frameworks */,
+				DEF11CDE026BF4CE06E01009 /* libPods-Mercurio_Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,7 +106,7 @@
 				6003F5B5195388D20070C39A /* Tests */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
-				D42F795BED516ED7DFD4A7F3 /* Pods */,
+				B59A133335571583F13D6239 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,9 +126,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				98BE7D2F65CB09F5BB79EBE8 /* libPods.a */,
-				4B9B7E011A27B7836229702D /* libPods-Mercurio_Example.a */,
-				C863B038AE1E75401AEB41E1 /* libPods-Mercurio_Tests.a */,
+				F1988329D73285547E7FF0FB /* libPods-Mercurio_Example.a */,
+				F451AC96830E4220AC01695E /* libPods-Mercurio_Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -192,13 +190,13 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		D42F795BED516ED7DFD4A7F3 /* Pods */ = {
+		B59A133335571583F13D6239 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				551DF75EDBBB8D768CF281A1 /* Pods-Mercurio_Example.debug.xcconfig */,
-				684B58B81DEFA40F02B4068C /* Pods-Mercurio_Example.release.xcconfig */,
-				7F8218E9045F1EB412F5B96A /* Pods-Mercurio_Tests.debug.xcconfig */,
-				BD9F60EDF6E598867639FBD0 /* Pods-Mercurio_Tests.release.xcconfig */,
+				DB0B6B8BEE0204C446C7B8E9 /* Pods-Mercurio_Example.debug.xcconfig */,
+				6B8377351EFF615DAE059D41 /* Pods-Mercurio_Example.release.xcconfig */,
+				460522BAEA893B6ECA37082E /* Pods-Mercurio_Tests.debug.xcconfig */,
+				C6FAA948BD31EBE3652769D3 /* Pods-Mercurio_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -210,12 +208,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "Mercurio_Example" */;
 			buildPhases = (
-				52BB6CE77A837E8F233F55EA /* Check Pods Manifest.lock */,
+				C28D60BC56FE23A5E75D07A8 /* 📦 Check Pods Manifest.lock */,
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				34B066119F551BD5FAE719F8 /* Embed Pods Frameworks */,
-				A67A2167BC31223E42191002 /* Copy Pods Resources */,
+				61FA37499E8CAA7AFBB88C19 /* 📦 Embed Pods Frameworks */,
+				8DC416F9AF1734A5AC084509 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -230,12 +228,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "Mercurio_Tests" */;
 			buildPhases = (
-				439DDF08742F0947437DDF4B /* Check Pods Manifest.lock */,
+				8488F14F37B772C1247339F0 /* 📦 Check Pods Manifest.lock */,
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
-				8E16B5630425E514792D87B2 /* Embed Pods Frameworks */,
-				D3CB83E2203F9DEC746FC855 /* Copy Pods Resources */,
+				68A1D66F935F9A49D2AB2F89 /* 📦 Embed Pods Frameworks */,
+				EB9995206F671B9FA46FC2D2 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -304,14 +302,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		34B066119F551BD5FAE719F8 /* Embed Pods Frameworks */ = {
+		61FA37499E8CAA7AFBB88C19 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,44 +317,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mercurio_Example/Pods-Mercurio_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		439DDF08742F0947437DDF4B /* Check Pods Manifest.lock */ = {
+		68A1D66F935F9A49D2AB2F89 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		52BB6CE77A837E8F233F55EA /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		8E16B5630425E514792D87B2 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,14 +332,29 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mercurio_Tests/Pods-Mercurio_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A67A2167BC31223E42191002 /* Copy Pods Resources */ = {
+		8488F14F37B772C1247339F0 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8DC416F9AF1734A5AC084509 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,14 +362,29 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mercurio_Example/Pods-Mercurio_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D3CB83E2203F9DEC746FC855 /* Copy Pods Resources */ = {
+		C28D60BC56FE23A5E75D07A8 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EB9995206F671B9FA46FC2D2 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -521,7 +519,7 @@
 		};
 		6003F5C0195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 551DF75EDBBB8D768CF281A1 /* Pods-Mercurio_Example.debug.xcconfig */;
+			baseConfigurationReference = DB0B6B8BEE0204C446C7B8E9 /* Pods-Mercurio_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -538,7 +536,7 @@
 		};
 		6003F5C1195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 684B58B81DEFA40F02B4068C /* Pods-Mercurio_Example.release.xcconfig */;
+			baseConfigurationReference = 6B8377351EFF615DAE059D41 /* Pods-Mercurio_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -555,7 +553,7 @@
 		};
 		6003F5C3195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7F8218E9045F1EB412F5B96A /* Pods-Mercurio_Tests.debug.xcconfig */;
+			baseConfigurationReference = 460522BAEA893B6ECA37082E /* Pods-Mercurio_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -574,7 +572,7 @@
 		};
 		6003F5C4195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD9F60EDF6E598867639FBD0 /* Pods-Mercurio_Tests.release.xcconfig */;
+			baseConfigurationReference = C6FAA948BD31EBE3652769D3 /* Pods-Mercurio_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

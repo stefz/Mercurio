@@ -2,10 +2,12 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 platform :ios, '7.0'
 
-target 'Mercurio_Example', :exclusive => true do
-    pod "Mercurio", :path => "../"
-end
+target 'Mercurio_Example' do
+  pod 'Mercurio', :path => '../'
 
-target 'Mercurio_Tests', :exclusive => true do
-    pod "Mercurio", :path => "../"
+  target 'Mercurio_Tests' do
+    inherit! :search_paths
+
+    
+  end
 end
