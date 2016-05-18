@@ -66,7 +66,7 @@ NSTimeInterval const MEDefaultAPITimeout = 5;
         [serializer setAuthorizationHeaderFieldWithUsername:[[MECredentialManager sharedInstance] username]
                                                    password:[[MECredentialManager sharedInstance] password]];
     } else if (_authentication == MEApiAuthenticationToken) {
-        [serializer setValue:[[MECredentialManager sharedInstance] token] forHTTPHeaderField:METokenHeaderKey];
+        [serializer setValue:[[MECredentialManager sharedInstance] token] forHTTPHeaderField:self.tokenHeaderName ?: METokenHeaderKey];
     }
 }
 
