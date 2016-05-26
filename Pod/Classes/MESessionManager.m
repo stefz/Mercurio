@@ -142,7 +142,7 @@
                                                        }
                                                    }];
             } else {
-                success(dataTask, responseObject);
+                success(dataTask, api.jsonRoot ? [responseObject valueForKeyPath:api.jsonRoot] : responseObject);
             }
         }
     }];
