@@ -1,6 +1,6 @@
 {
   "name": "Mercurio",
-  "version": "0.1.4",
+  "version": "0.3.0",
   "summary": "Mercurio is a fast way to make an api with AFNetworking and parse the response with Mantle.",
   "homepage": "https://github.com/stefz/Mercurio",
   "license": "MIT",
@@ -9,7 +9,7 @@
   },
   "source": {
     "git": "https://github.com/stefz/Mercurio.git",
-    "tag": "0.1.4"
+    "tag": "0.3.0"
   },
   "social_media_url": "https://twitter.com/stezanna",
   "platforms": {
@@ -29,8 +29,8 @@
     "Mantle": [
       "~> 2.0.6"
     ],
-    "SSKeychain": [
-      "~> 1.2.3"
+    "SAMKeychain": [
+      "~> 1.5.1"
     ]
   }
 }

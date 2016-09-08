@@ -7,7 +7,7 @@
 //
 
 #import "MEKeyChain.h"
-#import <SSKeychain/SSKeychain.h>
+#import <SAMKeychain/SAMKeychain.h>
 
 @interface MEKeyChain ()
 
@@ -28,23 +28,23 @@
 
 - (void)setCredential:(NSString *)credential forKey:(NSString *)key service:(NSString *)serviceIdentifier {
 
-    [SSKeychain setPassword:credential forService:serviceIdentifier account:key];
+    [SAMKeychain setPassword:credential forService:serviceIdentifier account:key];
 }
 
 - (NSArray *)getCredentialsForService:(NSString *)serviceIdentifier {
 
-    NSArray *services = [SSKeychain accountsForService:serviceIdentifier];
+    NSArray *services = [SAMKeychain accountsForService:serviceIdentifier];
     return services;
 }
 
 - (NSString *)getCredentialForKey:(NSString *)key serviceIdentifier:(NSString *)serviceIdentifier {
 
-    return [SSKeychain passwordForService:serviceIdentifier account:key];
+    return [SAMKeychain passwordForService:serviceIdentifier account:key];
 }
 
 - (void)clearCredentialForKey:(NSString *)key serviceIdentifier:(NSString *)serviceIdentifier {
 
-    [SSKeychain deletePasswordForService:serviceIdentifier account:key];
+    [SAMKeychain deletePasswordForService:serviceIdentifier account:key];
 }
 
 @end
