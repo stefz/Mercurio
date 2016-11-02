@@ -17,6 +17,7 @@
   },
   "requires_arc": true,
   "public_header_files": "Pod/Classes/**/*",
+  "header_mappings_dir": "Pod/Classes",
   "source_files": "Pod/Classes/**/*",
   "dependencies": {
     "AFNetworking": [

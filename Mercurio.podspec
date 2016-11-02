@@ -20,8 +20,10 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.public_header_files = 'Pod/Classes/**/*'
+  s.header_mappings_dir = 'Pod/Classes'
 
   s.source_files = 'Pod/Classes/**/*'
+
   s.dependency 'AFNetworking', '~> 3.0'
   s.dependency 'Mantle', '~> 2.0.6'
   s.dependency 'SAMKeychain', '~> 1.5.1'
