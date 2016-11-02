@@ -6,7 +6,7 @@
 //  Copyright © 2015 Stefano Zanetti. All rights reserved.
 //
 
-#import <MEModel.h>
+#import "MEModel.h"
 
 @interface MEResponse : MEModel
 
