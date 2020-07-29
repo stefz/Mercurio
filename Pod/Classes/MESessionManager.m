@@ -35,11 +35,13 @@
     self.responseSerializer = [api responseSerializer];
     
     NSURLSessionDataTask *task = [self dataTaskWithApi:api success:^(NSURLSessionDataTask *task, id responseObject) {
-        completion(responseObject, task, nil);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            completion(responseObject, task, nil);
+        });
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        
-        completion(nil, task, error);
-        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            completion(nil, task, error);
+        });
     }];
     
     [task resume];
@@ -118,31 +120,40 @@
                                   success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
                                   failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure {
     __block NSURLSessionDataTask *dataTask = nil;
-    dataTask = [self dataTaskWithRequest:request completionHandler:^(NSURLResponse * __unused response, id responseObject, NSError *error) {
+    
+    
+    
+    dataTask = [self.session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+                        
         if (error) {
             if (failure) {
                 failure(dataTask, error);
             }
-        } else if (!responseObject) {
-            success(dataTask, nil);
         } else {
-            if (success && api.responseObjectClass != [NSNull class]) {
-                
-                [api.responseObjectClass objectWithJsonObject:responseObject
-                                                     jsonRoot:api.jsonRoot
-                                                   completion:^(id<MTLJSONSerializing> object, NSError *error) {
-                                                       if (error) {
-                                                           failure(dataTask, error);
-                                                       } else {
-                                                           if (!object) {
+            
+            id responseObject = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+            
+            if (!responseObject) {
+                success(dataTask, error);
+            } else {
+                if (success && api.responseObjectClass != [NSNull class]) {
+                    
+                    [api.responseObjectClass objectWithJsonObject:responseObject
+                                                         jsonRoot:api.jsonRoot
+                                                       completion:^(id<MTLJSONSerializing> object, NSError *error) {
+                                                           if (error) {
                                                                failure(dataTask, error);
                                                            } else {
-                                                               success(dataTask, object);
+                                                               if (!object) {
+                                                                   failure(dataTask, error);
+                                                               } else {
+                                                                   success(dataTask, object);
+                                                               }
                                                            }
-                                                       }
-                                                   }];
-            } else {
-                success(dataTask, api.jsonRoot ? [responseObject valueForKeyPath:api.jsonRoot] : responseObject);
+                                                       }];
+                } else {
+                    success(dataTask, api.jsonRoot ? [responseObject valueForKeyPath:api.jsonRoot] : responseObject);
+                }
             }
         }
     }];

@@ -48,7 +48,7 @@
     [[MESessionManager sharedInstance] setResponseSerializer:responseSerializer];
     
     MEApi *api = [MEApi apiWithMethod:MEApiMethodGET
-                                 path:@"https://httpbin.org/getff"
+                                 path:@"http://httpbin.org/get"
                         responseClass:[MEResponse class]
                              jsonRoot:@"headers"];
     
@@ -58,8 +58,8 @@
                                                        NSLog(@"%@", responseObject);
                                                        
                                                        if (error) {
-                                                           NSLog(@"Status code: %zd", [error me_response].statusCode);
-                                                           NSLog(@"Status code: %@", [NSString stringWithUTF8String:[error me_responseData].bytes]);
+//                                                           NSLog(@"Status code: %zd", [error me_response].statusCode);
+//                                                           NSLog(@"Status code: %@", [NSString stringWithUTF8String:[error me_responseData].bytes]);
                                                        }
                                                        
                                                        _logTextView.text = error ? [error localizedDescription] : [responseObject description];

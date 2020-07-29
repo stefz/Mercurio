@@ -1,41 +1,47 @@
 PODS:
-  - AFNetworking (3.1.0):
-    - AFNetworking/NSURLSession (= 3.1.0)
-    - AFNetworking/Reachability (= 3.1.0)
-    - AFNetworking/Security (= 3.1.0)
-    - AFNetworking/Serialization (= 3.1.0)
-    - AFNetworking/UIKit (= 3.1.0)
-  - AFNetworking/NSURLSession (3.1.0):
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.1.0)
-  - AFNetworking/Security (3.1.0)
-  - AFNetworking/Serialization (3.1.0)
-  - AFNetworking/UIKit (3.1.0):
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
   - Mantle (2.0.7):
     - Mantle/extobjc (= 2.0.7)
   - Mantle/extobjc (2.0.7)
   - Mercurio (0.3.0):
-    - AFNetworking (~> 3.0)
+    - AFNetworking (~> 4.0)
     - Mantle (~> 2.0.6)
     - SAMKeychain (~> 1.5.1)
-  - SAMKeychain (1.5.2)
+  - SAMKeychain (1.5.3)
 
 DEPENDENCIES:
   - Mercurio (from `../`)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AFNetworking
+    - Mantle
+    - SAMKeychain
 
 EXTERNAL SOURCES:
   Mercurio:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   Mantle: bc40bb061d8c2c6fb48d5083e04d928c3b7f73d9
-  Mercurio: 84d98f800b0be5e2ddf3c978603f43bfeab1603d
-  SAMKeychain: 1865333198217411f35327e8da61b43de79b635b
+  Mercurio: a042cb4cd2906270ed2859ebfdeb8f11f806587c
+  SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
 
-PODFILE CHECKSUM: d2051d51fc5868e9b82c05b12b4e5c8ab8d4cfc4
+PODFILE CHECKSUM: 2d74066005427c5638bb10772fa429675838ed54
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.9.3

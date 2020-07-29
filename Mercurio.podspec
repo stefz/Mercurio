@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/stefz/Mercurio.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/stezanna'
 
-  s.platform     = :ios, '7.0'
+  s.platform     = :ios, '9.0'
   s.requires_arc = true
 
   s.public_header_files = 'Pod/Classes/**/*'
@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Pod/Classes/**/*'
 
-  s.dependency 'AFNetworking', '~> 3.0'
+  s.dependency 'AFNetworking', '~> 4.0'
   s.dependency 'Mantle', '~> 2.0.6'
   s.dependency 'SAMKeychain', '~> 1.5.1'
 end
