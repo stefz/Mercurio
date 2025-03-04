@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Pod/Classes/**/*'
 
-  s.dependency 'AFNetworking', :git=>'https://github.com/stefz/AFNetworking.git', :branch=>'master'
+  s.dependency 'AFNetworking'
   s.dependency 'Mantle', '~> 2.0.6'
   s.dependency 'SAMKeychain', '~> 1.5.1'
 end
